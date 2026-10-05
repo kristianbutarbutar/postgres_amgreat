@@ -24,7 +24,7 @@ SET default_table_access_method = heap;
 -- Name: chat_logs; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.chat_logs (
+CREATE TABLE  chat_logs (
     id integer NOT NULL,
     chattype character varying(20),
     uid character varying(50),
@@ -36,13 +36,13 @@ CREATE TABLE public.chat_logs (
 );
 
 
-ALTER TABLE public.chat_logs OWNER TO amgreat;
+ALTER TABLE  chat_logs OWNER TO amgreat;
 
 --
 -- Name: chat_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: amgreat
 --
 
-CREATE SEQUENCE public.chat_logs_id_seq
+CREATE SEQUENCE  chat_logs_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -51,20 +51,20 @@ CREATE SEQUENCE public.chat_logs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.chat_logs_id_seq OWNER TO amgreat;
+ALTER TABLE  chat_logs_id_seq OWNER TO amgreat;
 
 --
 -- Name: chat_logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: amgreat
 --
 
-ALTER SEQUENCE public.chat_logs_id_seq OWNED BY public.chat_logs.id;
+ALTER SEQUENCE  chat_logs_id_seq OWNED BY  chat_logs.id;
 
 
 --
 -- Name: employees; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.employees (
+CREATE TABLE  employees (
     emp_id integer NOT NULL,
     first_name character varying(100),
     salary numeric(10,2),
@@ -74,13 +74,13 @@ CREATE TABLE public.employees (
 );
 
 
-ALTER TABLE public.employees OWNER TO amgreat;
+ALTER TABLE  employees OWNER TO amgreat;
 
 --
 -- Name: master_heartbeats; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.master_heartbeats (
+CREATE TABLE  master_heartbeats (
     master_id character varying(100) NOT NULL,
     ip_address character varying(50) NOT NULL,
     port integer NOT NULL,
@@ -89,13 +89,13 @@ CREATE TABLE public.master_heartbeats (
 );
 
 
-ALTER TABLE public.master_heartbeats OWNER TO amgreat;
+ALTER TABLE  master_heartbeats OWNER TO amgreat;
 
 --
 -- Name: routing_mapping; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.routing_mapping (
+CREATE TABLE  routing_mapping (
     id character varying(255) NOT NULL,
     node_id integer NOT NULL,
     node_ip character varying(50),
@@ -105,13 +105,13 @@ CREATE TABLE public.routing_mapping (
 );
 
 
-ALTER TABLE public.routing_mapping OWNER TO amgreat;
+ALTER TABLE  routing_mapping OWNER TO amgreat;
 
 --
 -- Name: t_a_a_log; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_a_a_log (
+CREATE TABLE  t_a_a_log (
     id character varying(50),
     pid character varying(50),
     description character varying(200),
@@ -125,13 +125,13 @@ CREATE TABLE public.t_a_a_log (
 );
 
 
-ALTER TABLE public.t_a_a_log OWNER TO amgreat;
+ALTER TABLE  t_a_a_log OWNER TO amgreat;
 
 --
 -- Name: t_a_a_t_version; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_a_a_t_version (
+CREATE TABLE  t_a_a_t_version (
     id character varying(50),
     pid character varying(50),
     version character varying(100),
@@ -146,13 +146,13 @@ CREATE TABLE public.t_a_a_t_version (
 );
 
 
-ALTER TABLE public.t_a_a_t_version OWNER TO amgreat;
+ALTER TABLE  t_a_a_t_version OWNER TO amgreat;
 
 --
 -- Name: t_a_a_template; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_a_a_template (
+CREATE TABLE  t_a_a_template (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -167,13 +167,13 @@ CREATE TABLE public.t_a_a_template (
 );
 
 
-ALTER TABLE public.t_a_a_template OWNER TO amgreat;
+ALTER TABLE  t_a_a_template OWNER TO amgreat;
 
 --
 -- Name: t_account; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_account (
+CREATE TABLE  t_account (
     id character varying(50) NOT NULL,
     pid character varying(50),
     account_no character varying(50),
@@ -189,13 +189,13 @@ CREATE TABLE public.t_account (
 );
 
 
-ALTER TABLE public.t_account OWNER TO amgreat;
+ALTER TABLE  t_account OWNER TO amgreat;
 
 --
 -- Name: t_address; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_address (
+CREATE TABLE  t_address (
     id character varying(50),
     pid character varying(50),
     line1 character varying(100),
@@ -214,13 +214,13 @@ CREATE TABLE public.t_address (
 );
 
 
-ALTER TABLE public.t_address OWNER TO amgreat;
+ALTER TABLE  t_address OWNER TO amgreat;
 
 --
 -- Name: t_amgreat_apps; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_amgreat_apps (
+CREATE TABLE  t_amgreat_apps (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -235,13 +235,13 @@ CREATE TABLE public.t_amgreat_apps (
 );
 
 
-ALTER TABLE public.t_amgreat_apps OWNER TO amgreat;
+ALTER TABLE  t_amgreat_apps OWNER TO amgreat;
 
 --
 -- Name: t_attribute_groups; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_attribute_groups (
+CREATE TABLE  t_attribute_groups (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -255,13 +255,13 @@ CREATE TABLE public.t_attribute_groups (
 );
 
 
-ALTER TABLE public.t_attribute_groups OWNER TO amgreat;
+ALTER TABLE  t_attribute_groups OWNER TO amgreat;
 
 --
 -- Name: t_attributes; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_attributes (
+CREATE TABLE  t_attributes (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -275,13 +275,13 @@ CREATE TABLE public.t_attributes (
 );
 
 
-ALTER TABLE public.t_attributes OWNER TO amgreat;
+ALTER TABLE  t_attributes OWNER TO amgreat;
 
 --
 -- Name: t_business_transformation; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_business_transformation (
+CREATE TABLE  t_business_transformation (
     id character varying(50) NOT NULL,
     pid character varying(50),
     label character varying(250),
@@ -297,13 +297,13 @@ CREATE TABLE public.t_business_transformation (
 );
 
 
-ALTER TABLE public.t_business_transformation OWNER TO amgreat;
+ALTER TABLE  t_business_transformation OWNER TO amgreat;
 
 --
 -- Name: t_card; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_card (
+CREATE TABLE  t_card (
     id character varying(50) NOT NULL,
     pid character varying(50),
     customer_id character varying(50),
@@ -319,13 +319,13 @@ CREATE TABLE public.t_card (
 );
 
 
-ALTER TABLE public.t_card OWNER TO amgreat;
+ALTER TABLE  t_card OWNER TO amgreat;
 
 --
 -- Name: t_col_list_map; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_col_list_map (
+CREATE TABLE  t_col_list_map (
     id character varying(50) NOT NULL,
     pid character varying(50),
     col_id character varying(100),
@@ -338,13 +338,13 @@ CREATE TABLE public.t_col_list_map (
 );
 
 
-ALTER TABLE public.t_col_list_map OWNER TO amgreat;
+ALTER TABLE  t_col_list_map OWNER TO amgreat;
 
 --
 -- Name: t_columns; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_columns (
+CREATE TABLE  t_columns (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -360,13 +360,13 @@ CREATE TABLE public.t_columns (
 );
 
 
-ALTER TABLE public.t_columns OWNER TO amgreat;
+ALTER TABLE  t_columns OWNER TO amgreat;
 
 --
 -- Name: t_con_apps_forms_tab; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_con_apps_forms_tab (
+CREATE TABLE  t_con_apps_forms_tab (
     id character varying(50),
     pid character varying(50),
     label character varying(250),
@@ -381,13 +381,13 @@ CREATE TABLE public.t_con_apps_forms_tab (
 );
 
 
-ALTER TABLE public.t_con_apps_forms_tab OWNER TO amgreat;
+ALTER TABLE  t_con_apps_forms_tab OWNER TO amgreat;
 
 --
 -- Name: t_contact; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_contact (
+CREATE TABLE  t_contact (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -402,13 +402,13 @@ CREATE TABLE public.t_contact (
 );
 
 
-ALTER TABLE public.t_contact OWNER TO amgreat;
+ALTER TABLE  t_contact OWNER TO amgreat;
 
 --
 -- Name: t_content; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_content (
+CREATE TABLE  t_content (
     id character varying(50),
     pid character varying(50),
     label1 character varying(250),
@@ -428,13 +428,13 @@ CREATE TABLE public.t_content (
 );
 
 
-ALTER TABLE public.t_content OWNER TO amgreat;
+ALTER TABLE  t_content OWNER TO amgreat;
 
 --
 -- Name: t_customer; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_customer (
+CREATE TABLE  t_customer (
     id character varying(50) NOT NULL,
     pid character varying(50),
     customer_no character varying(50),
@@ -449,13 +449,13 @@ CREATE TABLE public.t_customer (
 );
 
 
-ALTER TABLE public.t_customer OWNER TO amgreat;
+ALTER TABLE  t_customer OWNER TO amgreat;
 
 --
 -- Name: t_customer_account; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_customer_account (
+CREATE TABLE  t_customer_account (
     id character varying(50) NOT NULL,
     pid character varying(50),
     customer_id character varying(50),
@@ -470,13 +470,13 @@ CREATE TABLE public.t_customer_account (
 );
 
 
-ALTER TABLE public.t_customer_account OWNER TO amgreat;
+ALTER TABLE  t_customer_account OWNER TO amgreat;
 
 --
 -- Name: t_device; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_device (
+CREATE TABLE  t_device (
     id character varying(50) NOT NULL,
     pid character varying(50),
     merchant_id character varying(50),
@@ -491,13 +491,13 @@ CREATE TABLE public.t_device (
 );
 
 
-ALTER TABLE public.t_device OWNER TO amgreat;
+ALTER TABLE  t_device OWNER TO amgreat;
 
 --
 -- Name: t_document; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_document (
+CREATE TABLE  t_document (
     id character varying(50),
     pid character varying(50),
     document_type character varying(50),
@@ -513,13 +513,13 @@ CREATE TABLE public.t_document (
 );
 
 
-ALTER TABLE public.t_document OWNER TO amgreat;
+ALTER TABLE  t_document OWNER TO amgreat;
 
 --
 -- Name: t_emp_achievement; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_emp_achievement (
+CREATE TABLE  t_emp_achievement (
     id character varying(50) NOT NULL,
     pid character varying(50),
     employee_id character varying(50),
@@ -534,13 +534,13 @@ CREATE TABLE public.t_emp_achievement (
 );
 
 
-ALTER TABLE public.t_emp_achievement OWNER TO amgreat;
+ALTER TABLE  t_emp_achievement OWNER TO amgreat;
 
 --
 -- Name: t_emp_assignment; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_emp_assignment (
+CREATE TABLE  t_emp_assignment (
     id character varying(50) NOT NULL,
     pid character varying(50),
     employee_id character varying(50),
@@ -555,13 +555,13 @@ CREATE TABLE public.t_emp_assignment (
 );
 
 
-ALTER TABLE public.t_emp_assignment OWNER TO amgreat;
+ALTER TABLE  t_emp_assignment OWNER TO amgreat;
 
 --
 -- Name: t_emp_experience; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_emp_experience (
+CREATE TABLE  t_emp_experience (
     id character varying(50) NOT NULL,
     pid character varying(50),
     employee_id character varying(50),
@@ -578,13 +578,13 @@ CREATE TABLE public.t_emp_experience (
 );
 
 
-ALTER TABLE public.t_emp_experience OWNER TO amgreat;
+ALTER TABLE  t_emp_experience OWNER TO amgreat;
 
 --
 -- Name: t_employee; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_employee (
+CREATE TABLE  t_employee (
     id character varying(50) NOT NULL,
     pid character varying(50),
     emp_no character varying(50),
@@ -600,13 +600,13 @@ CREATE TABLE public.t_employee (
 );
 
 
-ALTER TABLE public.t_employee OWNER TO amgreat;
+ALTER TABLE  t_employee OWNER TO amgreat;
 
 --
 -- Name: t_f_col_sql; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_f_col_sql (
+CREATE TABLE  t_f_col_sql (
     id character varying(50),
     pid character varying(50),
     sql text,
@@ -619,13 +619,13 @@ CREATE TABLE public.t_f_col_sql (
 );
 
 
-ALTER TABLE public.t_f_col_sql OWNER TO amgreat;
+ALTER TABLE  t_f_col_sql OWNER TO amgreat;
 
 --
 -- Name: t_file; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_file (
+CREATE TABLE  t_file (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -641,13 +641,13 @@ CREATE TABLE public.t_file (
 );
 
 
-ALTER TABLE public.t_file OWNER TO amgreat;
+ALTER TABLE  t_file OWNER TO amgreat;
 
 --
 -- Name: t_form; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_form (
+CREATE TABLE  t_form (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -667,13 +667,13 @@ CREATE TABLE public.t_form (
 );
 
 
-ALTER TABLE public.t_form OWNER TO amgreat;
+ALTER TABLE  t_form OWNER TO amgreat;
 
 --
 -- Name: t_form_actions; Type: TABLE; Schema: public; Owner: admin
 --
 
-CREATE TABLE public.t_form_actions (
+CREATE TABLE  t_form_actions (
     id character varying(100),
     pid character varying(100),
     label character varying(100),
@@ -690,13 +690,13 @@ CREATE TABLE public.t_form_actions (
 );
 
 
-ALTER TABLE public.t_form_actions OWNER TO admin;
+ALTER TABLE  t_form_actions OWNER TO admin;
 
 --
 -- Name: t_form_columns; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_form_columns (
+CREATE TABLE  t_form_columns (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -720,13 +720,13 @@ CREATE TABLE public.t_form_columns (
 );
 
 
-ALTER TABLE public.t_form_columns OWNER TO amgreat;
+ALTER TABLE  t_form_columns OWNER TO amgreat;
 
 --
 -- Name: t_form_template; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_form_template (
+CREATE TABLE  t_form_template (
     id character varying(50),
     pid character varying(50),
     viewtype character varying(50),
@@ -741,13 +741,13 @@ CREATE TABLE public.t_form_template (
 );
 
 
-ALTER TABLE public.t_form_template OWNER TO amgreat;
+ALTER TABLE  t_form_template OWNER TO amgreat;
 
 --
 -- Name: t_form_template_temp; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_form_template_temp (
+CREATE TABLE  t_form_template_temp (
     id character varying(50),
     pid character varying(50),
     viewtype character varying(50),
@@ -761,13 +761,13 @@ CREATE TABLE public.t_form_template_temp (
 );
 
 
-ALTER TABLE public.t_form_template_temp OWNER TO amgreat;
+ALTER TABLE  t_form_template_temp OWNER TO amgreat;
 
 --
 -- Name: t_group; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_group (
+CREATE TABLE  t_group (
     id character varying(50),
     pid character varying(50),
     label character varying(200),
@@ -781,20 +781,20 @@ CREATE TABLE public.t_group (
 );
 
 
-ALTER TABLE public.t_group OWNER TO amgreat;
+ALTER TABLE  t_group OWNER TO amgreat;
 
 --
 -- Name: TABLE t_group; Type: COMMENT; Schema: public; Owner: amgreat
 --
 
-COMMENT ON TABLE public.t_group IS 'Enterprise organizational groups and role-based categorization registry';
+COMMENT ON TABLE  t_group IS 'Enterprise organizational groups and role-based categorization registry';
 
 
 --
 -- Name: t_group_members; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_group_members (
+CREATE TABLE  t_group_members (
     id character varying(50),
     pid character varying(50),
     personid character varying(50),
@@ -809,13 +809,13 @@ CREATE TABLE public.t_group_members (
 );
 
 
-ALTER TABLE public.t_group_members OWNER TO amgreat;
+ALTER TABLE  t_group_members OWNER TO amgreat;
 
 --
 -- Name: t_ht_address; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_address (
+CREATE TABLE  t_ht_address (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -834,13 +834,13 @@ CREATE TABLE public.t_ht_address (
 );
 
 
-ALTER TABLE public.t_ht_address OWNER TO amgreat;
+ALTER TABLE  t_ht_address OWNER TO amgreat;
 
 --
 -- Name: t_ht_assets; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_assets (
+CREATE TABLE  t_ht_assets (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -867,13 +867,13 @@ CREATE TABLE public.t_ht_assets (
 );
 
 
-ALTER TABLE public.t_ht_assets OWNER TO amgreat;
+ALTER TABLE  t_ht_assets OWNER TO amgreat;
 
 --
 -- Name: t_ht_building; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_building (
+CREATE TABLE  t_ht_building (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -888,13 +888,13 @@ CREATE TABLE public.t_ht_building (
 );
 
 
-ALTER TABLE public.t_ht_building OWNER TO amgreat;
+ALTER TABLE  t_ht_building OWNER TO amgreat;
 
 --
 -- Name: t_ht_coa; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_coa (
+CREATE TABLE  t_ht_coa (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -914,13 +914,13 @@ CREATE TABLE public.t_ht_coa (
 );
 
 
-ALTER TABLE public.t_ht_coa OWNER TO amgreat;
+ALTER TABLE  t_ht_coa OWNER TO amgreat;
 
 --
 -- Name: t_ht_contact; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_contact (
+CREATE TABLE  t_ht_contact (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -939,13 +939,13 @@ CREATE TABLE public.t_ht_contact (
 );
 
 
-ALTER TABLE public.t_ht_contact OWNER TO amgreat;
+ALTER TABLE  t_ht_contact OWNER TO amgreat;
 
 --
 -- Name: t_ht_customers; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_customers (
+CREATE TABLE  t_ht_customers (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -968,13 +968,13 @@ CREATE TABLE public.t_ht_customers (
 );
 
 
-ALTER TABLE public.t_ht_customers OWNER TO amgreat;
+ALTER TABLE  t_ht_customers OWNER TO amgreat;
 
 --
 -- Name: t_ht_hotel; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_hotel (
+CREATE TABLE  t_ht_hotel (
     id character varying(200) NOT NULL,
     pid character varying(200) DEFAULT '0'::character varying,
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -991,13 +991,13 @@ CREATE TABLE public.t_ht_hotel (
 );
 
 
-ALTER TABLE public.t_ht_hotel OWNER TO amgreat;
+ALTER TABLE  t_ht_hotel OWNER TO amgreat;
 
 --
 -- Name: t_ht_menu; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_menu (
+CREATE TABLE  t_ht_menu (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1017,13 +1017,13 @@ CREATE TABLE public.t_ht_menu (
 );
 
 
-ALTER TABLE public.t_ht_menu OWNER TO amgreat;
+ALTER TABLE  t_ht_menu OWNER TO amgreat;
 
 --
 -- Name: t_ht_orders; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_orders (
+CREATE TABLE  t_ht_orders (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1045,13 +1045,13 @@ CREATE TABLE public.t_ht_orders (
 );
 
 
-ALTER TABLE public.t_ht_orders OWNER TO amgreat;
+ALTER TABLE  t_ht_orders OWNER TO amgreat;
 
 --
 -- Name: t_ht_payment_history; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_payment_history (
+CREATE TABLE  t_ht_payment_history (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1072,13 +1072,13 @@ CREATE TABLE public.t_ht_payment_history (
 );
 
 
-ALTER TABLE public.t_ht_payment_history OWNER TO amgreat;
+ALTER TABLE  t_ht_payment_history OWNER TO amgreat;
 
 --
 -- Name: t_ht_rooms; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_rooms (
+CREATE TABLE  t_ht_rooms (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1101,13 +1101,13 @@ CREATE TABLE public.t_ht_rooms (
 );
 
 
-ALTER TABLE public.t_ht_rooms OWNER TO amgreat;
+ALTER TABLE  t_ht_rooms OWNER TO amgreat;
 
 --
 -- Name: t_ht_staff; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_staff (
+CREATE TABLE  t_ht_staff (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1132,13 +1132,13 @@ CREATE TABLE public.t_ht_staff (
 );
 
 
-ALTER TABLE public.t_ht_staff OWNER TO amgreat;
+ALTER TABLE  t_ht_staff OWNER TO amgreat;
 
 --
 -- Name: t_ht_tenants; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_ht_tenants (
+CREATE TABLE  t_ht_tenants (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1161,13 +1161,13 @@ CREATE TABLE public.t_ht_tenants (
 );
 
 
-ALTER TABLE public.t_ht_tenants OWNER TO amgreat;
+ALTER TABLE  t_ht_tenants OWNER TO amgreat;
 
 --
 -- Name: t_html_editor; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_html_editor (
+CREATE TABLE  t_html_editor (
     id character varying(50) NOT NULL,
     pid character varying(100),
     file character varying(200),
@@ -1180,13 +1180,13 @@ CREATE TABLE public.t_html_editor (
 );
 
 
-ALTER TABLE public.t_html_editor OWNER TO amgreat;
+ALTER TABLE  t_html_editor OWNER TO amgreat;
 
 --
 -- Name: t_icons; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_icons (
+CREATE TABLE  t_icons (
     id character varying(50) NOT NULL,
     pid character varying(50) NOT NULL,
     icon character varying(250) NOT NULL,
@@ -1200,13 +1200,13 @@ CREATE TABLE public.t_icons (
 );
 
 
-ALTER TABLE public.t_icons OWNER TO amgreat;
+ALTER TABLE  t_icons OWNER TO amgreat;
 
 --
 -- Name: t_list_sql; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_list_sql (
+CREATE TABLE  t_list_sql (
     id character varying(45) NOT NULL,
     pid character varying(45),
     description character varying(255),
@@ -1219,13 +1219,13 @@ CREATE TABLE public.t_list_sql (
 );
 
 
-ALTER TABLE public.t_list_sql OWNER TO amgreat;
+ALTER TABLE  t_list_sql OWNER TO amgreat;
 
 --
 -- Name: t_lov; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_lov (
+CREATE TABLE  t_lov (
     id character varying(50),
     pid character varying(50),
     label character varying(50),
@@ -1241,13 +1241,13 @@ CREATE TABLE public.t_lov (
 );
 
 
-ALTER TABLE public.t_lov OWNER TO amgreat;
+ALTER TABLE  t_lov OWNER TO amgreat;
 
 --
 -- Name: t_menu; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_menu (
+CREATE TABLE  t_menu (
     id character varying(50),
     pid character varying(50),
     menu_level character varying(50),
@@ -1265,13 +1265,13 @@ CREATE TABLE public.t_menu (
 );
 
 
-ALTER TABLE public.t_menu OWNER TO amgreat;
+ALTER TABLE  t_menu OWNER TO amgreat;
 
 --
 -- Name: t_merchant; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_merchant (
+CREATE TABLE  t_merchant (
     id character varying(50) NOT NULL,
     pid character varying(50),
     merchant_no character varying(50),
@@ -1286,13 +1286,13 @@ CREATE TABLE public.t_merchant (
 );
 
 
-ALTER TABLE public.t_merchant OWNER TO amgreat;
+ALTER TABLE  t_merchant OWNER TO amgreat;
 
 --
 -- Name: t_merchant_account; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_merchant_account (
+CREATE TABLE  t_merchant_account (
     id character varying(50) NOT NULL,
     pid character varying(50),
     merchant_id character varying(50),
@@ -1307,13 +1307,13 @@ CREATE TABLE public.t_merchant_account (
 );
 
 
-ALTER TABLE public.t_merchant_account OWNER TO amgreat;
+ALTER TABLE  t_merchant_account OWNER TO amgreat;
 
 --
 -- Name: t_mn; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_mn (
+CREATE TABLE  t_mn (
     id character varying(50) NOT NULL,
     pid character varying(50),
     label character varying(100),
@@ -1329,13 +1329,13 @@ CREATE TABLE public.t_mn (
 );
 
 
-ALTER TABLE public.t_mn OWNER TO amgreat;
+ALTER TABLE  t_mn OWNER TO amgreat;
 
 --
 -- Name: t_mon_chat_node_cluster; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_mon_chat_node_cluster (
+CREATE TABLE  t_mon_chat_node_cluster (
     id integer NOT NULL,
     scan_timestamp timestamp without time zone,
     application_name character varying(255),
@@ -1346,13 +1346,13 @@ CREATE TABLE public.t_mon_chat_node_cluster (
 );
 
 
-ALTER TABLE public.t_mon_chat_node_cluster OWNER TO amgreat;
+ALTER TABLE  t_mon_chat_node_cluster OWNER TO amgreat;
 
 --
 -- Name: t_mon_chat_node_cluster_id_seq; Type: SEQUENCE; Schema: public; Owner: amgreat
 --
 
-CREATE SEQUENCE public.t_mon_chat_node_cluster_id_seq
+CREATE SEQUENCE  t_mon_chat_node_cluster_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -1361,20 +1361,20 @@ CREATE SEQUENCE public.t_mon_chat_node_cluster_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.t_mon_chat_node_cluster_id_seq OWNER TO amgreat;
+ALTER TABLE  t_mon_chat_node_cluster_id_seq OWNER TO amgreat;
 
 --
 -- Name: t_mon_chat_node_cluster_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: amgreat
 --
 
-ALTER SEQUENCE public.t_mon_chat_node_cluster_id_seq OWNED BY public.t_mon_chat_node_cluster.id;
+ALTER SEQUENCE  t_mon_chat_node_cluster_id_seq OWNED BY  t_mon_chat_node_cluster.id;
 
 
 --
 -- Name: t_object_uploaded; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_object_uploaded (
+CREATE TABLE  t_object_uploaded (
     id character varying(50) NOT NULL,
     pid character varying(100),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1385,13 +1385,13 @@ CREATE TABLE public.t_object_uploaded (
 );
 
 
-ALTER TABLE public.t_object_uploaded OWNER TO amgreat;
+ALTER TABLE  t_object_uploaded OWNER TO amgreat;
 
 --
 -- Name: t_org_function; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_org_function (
+CREATE TABLE  t_org_function (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -1405,13 +1405,13 @@ CREATE TABLE public.t_org_function (
 );
 
 
-ALTER TABLE public.t_org_function OWNER TO amgreat;
+ALTER TABLE  t_org_function OWNER TO amgreat;
 
 --
 -- Name: t_org_function_dept; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_org_function_dept (
+CREATE TABLE  t_org_function_dept (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -1426,13 +1426,13 @@ CREATE TABLE public.t_org_function_dept (
 );
 
 
-ALTER TABLE public.t_org_function_dept OWNER TO amgreat;
+ALTER TABLE  t_org_function_dept OWNER TO amgreat;
 
 --
 -- Name: t_org_function_member; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_org_function_member (
+CREATE TABLE  t_org_function_member (
     id character varying(50),
     pid character varying(50),
     personid character varying(50),
@@ -1447,13 +1447,13 @@ CREATE TABLE public.t_org_function_member (
 );
 
 
-ALTER TABLE public.t_org_function_member OWNER TO amgreat;
+ALTER TABLE  t_org_function_member OWNER TO amgreat;
 
 --
 -- Name: t_party; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party (
+CREATE TABLE  t_party (
     id character varying(200) NOT NULL,
     pid character varying(200),
     status character varying(50) DEFAULT 'ACTIVE'::character varying,
@@ -1476,13 +1476,13 @@ CREATE TABLE public.t_party (
 );
 
 
-ALTER TABLE public.t_party OWNER TO amgreat;
+ALTER TABLE  t_party OWNER TO amgreat;
 
 --
 -- Name: t_party_address; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party_address (
+CREATE TABLE  t_party_address (
     id character varying(50) NOT NULL,
     pid character varying(50),
     address_type character varying(50),
@@ -1500,13 +1500,13 @@ CREATE TABLE public.t_party_address (
 );
 
 
-ALTER TABLE public.t_party_address OWNER TO amgreat;
+ALTER TABLE  t_party_address OWNER TO amgreat;
 
 --
 -- Name: t_party_contact; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party_contact (
+CREATE TABLE  t_party_contact (
     id character varying(50) NOT NULL,
     pid character varying(50),
     contact_type character varying(50),
@@ -1521,13 +1521,13 @@ CREATE TABLE public.t_party_contact (
 );
 
 
-ALTER TABLE public.t_party_contact OWNER TO amgreat;
+ALTER TABLE  t_party_contact OWNER TO amgreat;
 
 --
 -- Name: t_party_document; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party_document (
+CREATE TABLE  t_party_document (
     id character varying(50) NOT NULL,
     pid character varying(50),
     doc_type character varying(50),
@@ -1542,13 +1542,13 @@ CREATE TABLE public.t_party_document (
 );
 
 
-ALTER TABLE public.t_party_document OWNER TO amgreat;
+ALTER TABLE  t_party_document OWNER TO amgreat;
 
 --
 -- Name: t_party_identity; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party_identity (
+CREATE TABLE  t_party_identity (
     id character varying(50) NOT NULL,
     pid character varying(50),
     id_type character varying(50),
@@ -1563,13 +1563,13 @@ CREATE TABLE public.t_party_identity (
 );
 
 
-ALTER TABLE public.t_party_identity OWNER TO amgreat;
+ALTER TABLE  t_party_identity OWNER TO amgreat;
 
 --
 -- Name: t_party_relationship; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_party_relationship (
+CREATE TABLE  t_party_relationship (
     id character varying(50) NOT NULL,
     pid character varying(50),
     target_party_id character varying(50),
@@ -1583,13 +1583,13 @@ CREATE TABLE public.t_party_relationship (
 );
 
 
-ALTER TABLE public.t_party_relationship OWNER TO amgreat;
+ALTER TABLE  t_party_relationship OWNER TO amgreat;
 
 --
 -- Name: t_person; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_person (
+CREATE TABLE  t_person (
     id character varying(50),
     pid character varying(50),
     legalname character varying(200),
@@ -1609,13 +1609,13 @@ CREATE TABLE public.t_person (
 );
 
 
-ALTER TABLE public.t_person OWNER TO amgreat;
+ALTER TABLE  t_person OWNER TO amgreat;
 
 --
 -- Name: t_policy; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_policy (
+CREATE TABLE  t_policy (
     id character varying(50),
     pid character varying(50),
     label character varying(200),
@@ -1628,13 +1628,13 @@ CREATE TABLE public.t_policy (
 );
 
 
-ALTER TABLE public.t_policy OWNER TO amgreat;
+ALTER TABLE  t_policy OWNER TO amgreat;
 
 --
 -- Name: t_policy_obj; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_policy_obj (
+CREATE TABLE  t_policy_obj (
     id character varying(50),
     pid character varying(50),
     object_type character varying(50),
@@ -1656,13 +1656,13 @@ CREATE TABLE public.t_policy_obj (
 );
 
 
-ALTER TABLE public.t_policy_obj OWNER TO amgreat;
+ALTER TABLE  t_policy_obj OWNER TO amgreat;
 
 --
 -- Name: t_portal_user; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_portal_user (
+CREATE TABLE  t_portal_user (
     id character varying(50) NOT NULL,
     pid character varying(100),
     uid character varying(50),
@@ -1678,13 +1678,13 @@ CREATE TABLE public.t_portal_user (
 );
 
 
-ALTER TABLE public.t_portal_user OWNER TO amgreat;
+ALTER TABLE  t_portal_user OWNER TO amgreat;
 
 --
 -- Name: t_product; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_product (
+CREATE TABLE  t_product (
     id character varying(50) NOT NULL,
     pid character varying(50),
     product_code character varying(50),
@@ -1700,13 +1700,13 @@ CREATE TABLE public.t_product (
 );
 
 
-ALTER TABLE public.t_product OWNER TO amgreat;
+ALTER TABLE  t_product OWNER TO amgreat;
 
 --
 -- Name: t_qris; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_qris (
+CREATE TABLE  t_qris (
     id character varying(50) NOT NULL,
     pid character varying(50),
     merchant_id character varying(50),
@@ -1721,13 +1721,13 @@ CREATE TABLE public.t_qris (
 );
 
 
-ALTER TABLE public.t_qris OWNER TO amgreat;
+ALTER TABLE  t_qris OWNER TO amgreat;
 
 --
 -- Name: t_reference; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_reference (
+CREATE TABLE  t_reference (
     id character varying(50),
     pid character varying(50),
     name character varying(100),
@@ -1744,13 +1744,13 @@ CREATE TABLE public.t_reference (
 );
 
 
-ALTER TABLE public.t_reference OWNER TO amgreat;
+ALTER TABLE  t_reference OWNER TO amgreat;
 
 --
 -- Name: t_role; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_role (
+CREATE TABLE  t_role (
     id character varying(50),
     pid character varying(50),
     label character varying(200),
@@ -1764,13 +1764,13 @@ CREATE TABLE public.t_role (
 );
 
 
-ALTER TABLE public.t_role OWNER TO amgreat;
+ALTER TABLE  t_role OWNER TO amgreat;
 
 --
 -- Name: t_role_group; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_role_group (
+CREATE TABLE  t_role_group (
     id character varying(50),
     pid character varying(50),
     groupid character varying(50),
@@ -1783,13 +1783,13 @@ CREATE TABLE public.t_role_group (
 );
 
 
-ALTER TABLE public.t_role_group OWNER TO amgreat;
+ALTER TABLE  t_role_group OWNER TO amgreat;
 
 --
 -- Name: t_role_members; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_role_members (
+CREATE TABLE  t_role_members (
     id character varying(50),
     pid character varying(50),
     personid character varying(50),
@@ -1802,13 +1802,13 @@ CREATE TABLE public.t_role_members (
 );
 
 
-ALTER TABLE public.t_role_members OWNER TO amgreat;
+ALTER TABLE  t_role_members OWNER TO amgreat;
 
 --
 -- Name: t_role_policies; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_role_policies (
+CREATE TABLE  t_role_policies (
     id character varying(50),
     pid character varying(50),
     policy_id character varying(50),
@@ -1821,13 +1821,13 @@ CREATE TABLE public.t_role_policies (
 );
 
 
-ALTER TABLE public.t_role_policies OWNER TO amgreat;
+ALTER TABLE  t_role_policies OWNER TO amgreat;
 
 --
 -- Name: t_session; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_session (
+CREATE TABLE  t_session (
     id character varying(50),
     pid character varying(50),
     formid character varying(50),
@@ -1840,13 +1840,13 @@ CREATE TABLE public.t_session (
 );
 
 
-ALTER TABLE public.t_session OWNER TO amgreat;
+ALTER TABLE  t_session OWNER TO amgreat;
 
 --
 -- Name: t_solution_product; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_solution_product (
+CREATE TABLE  t_solution_product (
     id character varying(50) NOT NULL,
     pid character varying(50),
     label character varying(250),
@@ -1862,13 +1862,13 @@ CREATE TABLE public.t_solution_product (
 );
 
 
-ALTER TABLE public.t_solution_product OWNER TO amgreat;
+ALTER TABLE  t_solution_product OWNER TO amgreat;
 
 --
 -- Name: t_sys_job; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_sys_job (
+CREATE TABLE  t_sys_job (
     id character varying(50),
     pid character varying(50),
     label character varying(50),
@@ -1883,13 +1883,13 @@ CREATE TABLE public.t_sys_job (
 );
 
 
-ALTER TABLE public.t_sys_job OWNER TO amgreat;
+ALTER TABLE  t_sys_job OWNER TO amgreat;
 
 --
 -- Name: t_t_cols_def; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_t_cols_def (
+CREATE TABLE  t_t_cols_def (
     id character varying(50) NOT NULL,
     pid character varying(100) NOT NULL,
     label character varying(100),
@@ -1906,13 +1906,13 @@ CREATE TABLE public.t_t_cols_def (
 );
 
 
-ALTER TABLE public.t_t_cols_def OWNER TO amgreat;
+ALTER TABLE  t_t_cols_def OWNER TO amgreat;
 
 --
 -- Name: t_template; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_template (
+CREATE TABLE  t_template (
     id character varying(50),
     pid character varying(50),
     label character varying(200),
@@ -1925,13 +1925,13 @@ CREATE TABLE public.t_template (
 );
 
 
-ALTER TABLE public.t_template OWNER TO amgreat;
+ALTER TABLE  t_template OWNER TO amgreat;
 
 --
 -- Name: t_tenant; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_tenant (
+CREATE TABLE  t_tenant (
     id character varying(50),
     pid character varying(50),
     accountno character varying(100),
@@ -1953,13 +1953,13 @@ CREATE TABLE public.t_tenant (
 );
 
 
-ALTER TABLE public.t_tenant OWNER TO amgreat;
+ALTER TABLE  t_tenant OWNER TO amgreat;
 
 --
 -- Name: t_tenant_db; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_tenant_db (
+CREATE TABLE  t_tenant_db (
     id character varying(50),
     pid character varying(50),
     dbip character varying(20),
@@ -1977,13 +1977,13 @@ CREATE TABLE public.t_tenant_db (
 );
 
 
-ALTER TABLE public.t_tenant_db OWNER TO amgreat;
+ALTER TABLE  t_tenant_db OWNER TO amgreat;
 
 --
 -- Name: t_token_master; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_token_master (
+CREATE TABLE  t_token_master (
     id integer NOT NULL,
     log_timestamp timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     action character varying(50),
@@ -1994,13 +1994,13 @@ CREATE TABLE public.t_token_master (
 );
 
 
-ALTER TABLE public.t_token_master OWNER TO amgreat;
+ALTER TABLE  t_token_master OWNER TO amgreat;
 
 --
 -- Name: t_token_master_id_seq; Type: SEQUENCE; Schema: public; Owner: amgreat
 --
 
-CREATE SEQUENCE public.t_token_master_id_seq
+CREATE SEQUENCE  t_token_master_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -2009,20 +2009,20 @@ CREATE SEQUENCE public.t_token_master_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.t_token_master_id_seq OWNER TO amgreat;
+ALTER TABLE  t_token_master_id_seq OWNER TO amgreat;
 
 --
 -- Name: t_token_master_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: amgreat
 --
 
-ALTER SEQUENCE public.t_token_master_id_seq OWNED BY public.t_token_master.id;
+ALTER SEQUENCE  t_token_master_id_seq OWNED BY  t_token_master.id;
 
 
 --
 -- Name: t_transaction_history; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_transaction_history (
+CREATE TABLE  t_transaction_history (
     id character varying(50) NOT NULL,
     pid character varying(50),
     account_id character varying(50),
@@ -2039,13 +2039,13 @@ CREATE TABLE public.t_transaction_history (
 );
 
 
-ALTER TABLE public.t_transaction_history OWNER TO amgreat;
+ALTER TABLE  t_transaction_history OWNER TO amgreat;
 
 --
 -- Name: t_types; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_types (
+CREATE TABLE  t_types (
     id character varying(50),
     pid character varying(50),
     label character varying(100),
@@ -2059,13 +2059,13 @@ CREATE TABLE public.t_types (
 );
 
 
-ALTER TABLE public.t_types OWNER TO amgreat;
+ALTER TABLE  t_types OWNER TO amgreat;
 
 --
 -- Name: t_uploaded_files; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_uploaded_files (
+CREATE TABLE  t_uploaded_files (
     id character varying(50) NOT NULL,
     pid character varying(100),
     originalname character varying(250),
@@ -2081,13 +2081,13 @@ CREATE TABLE public.t_uploaded_files (
 );
 
 
-ALTER TABLE public.t_uploaded_files OWNER TO amgreat;
+ALTER TABLE  t_uploaded_files OWNER TO amgreat;
 
 --
 -- Name: t_users; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_users (
+CREATE TABLE  t_users (
     id character varying(50),
     pid character varying(50),
     uid character varying(200),
@@ -2107,13 +2107,13 @@ CREATE TABLE public.t_users (
 );
 
 
-ALTER TABLE public.t_users OWNER TO amgreat;
+ALTER TABLE  t_users OWNER TO amgreat;
 
 --
 -- Name: t_users_role; Type: TABLE; Schema: public; Owner: amgreat
 --
 
-CREATE TABLE public.t_users_role (
+CREATE TABLE  t_users_role (
     id character varying(50),
     pid character varying(50),
     roleid character varying(50),
@@ -2126,34 +2126,34 @@ CREATE TABLE public.t_users_role (
 );
 
 
-ALTER TABLE public.t_users_role OWNER TO amgreat;
+ALTER TABLE  t_users_role OWNER TO amgreat;
 
 --
 -- Name: chat_logs id; Type: DEFAULT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.chat_logs ALTER COLUMN id SET DEFAULT nextval('public.chat_logs_id_seq'::regclass);
+ALTER TABLE ONLY  chat_logs ALTER COLUMN id SET DEFAULT nextval(' chat_logs_id_seq'::regclass);
 
 
 --
 -- Name: t_mon_chat_node_cluster id; Type: DEFAULT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_mon_chat_node_cluster ALTER COLUMN id SET DEFAULT nextval('public.t_mon_chat_node_cluster_id_seq'::regclass);
+ALTER TABLE ONLY  t_mon_chat_node_cluster ALTER COLUMN id SET DEFAULT nextval(' t_mon_chat_node_cluster_id_seq'::regclass);
 
 
 --
 -- Name: t_token_master id; Type: DEFAULT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_token_master ALTER COLUMN id SET DEFAULT nextval('public.t_token_master_id_seq'::regclass);
+ALTER TABLE ONLY  t_token_master ALTER COLUMN id SET DEFAULT nextval(' t_token_master_id_seq'::regclass);
 
 
 --
 -- Data for Name: chat_logs; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.chat_logs (id, chattype, uid, "timestamp", touid, message, seqno, status) FROM stdin;
+COPY  chat_logs (id, chattype, uid, "timestamp", touid, message, seqno, status) FROM stdin;
 2	incoming	u2	2026-09-19 16:01:00	u1	Hello Bob!	\N	\N
 1	outgoing	u1	2026-09-19 16:01:00	u2	Hello Bob!	\N	\N
 5	outgoing	u1	2026-09-20 14:53:38	u2	Hey Bob, are you available for a code review?	\N	\N
@@ -7424,7 +7424,7 @@ COPY public.chat_logs (id, chattype, uid, "timestamp", touid, message, seqno, st
 -- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.employees (emp_id, first_name, salary, is_active, hire_date, last_updated) FROM stdin;
+COPY  employees (emp_id, first_name, salary, is_active, hire_date, last_updated) FROM stdin;
 1001	Jane Doe	92000.75	t	2023-05-15	2023-05-15 03:30:00
 \.
 
@@ -7433,7 +7433,7 @@ COPY public.employees (emp_id, first_name, salary, is_active, hire_date, last_up
 -- Data for Name: master_heartbeats; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.master_heartbeats (master_id, ip_address, port, last_heartbeat, status) FROM stdin;
+COPY  master_heartbeats (master_id, ip_address, port, last_heartbeat, status) FROM stdin;
 master_instance_1	127.0.0.1	8080	2026-10-04 21:06:48.052559	ACTIVE
 \.
 
@@ -7442,7 +7442,7 @@ master_instance_1	127.0.0.1	8080	2026-10-04 21:06:48.052559	ACTIVE
 -- Data for Name: routing_mapping; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.routing_mapping (id, node_id, node_ip, node_port, "timestamp", status) FROM stdin;
+COPY  routing_mapping (id, node_id, node_ip, node_port, "timestamp", status) FROM stdin;
 Donal Trump_IF02098	1	127.0.0.1	9001	2026-09-25 11:46:59.494347	active
 Dorti_Namaste	2	127.0.0.1	9002	2026-09-25 11:47:12.274034	active
 \.
@@ -7452,7 +7452,7 @@ Dorti_Namaste	2	127.0.0.1	9002	2026-09-25 11:47:12.274034	active
 -- Data for Name: t_a_a_log; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_a_a_log (id, pid, description, src_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_a_a_log (id, pid, description, src_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -7460,7 +7460,7 @@ COPY public.t_a_a_log (id, pid, description, src_path, status, createdby, create
 -- Data for Name: t_a_a_t_version; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_a_a_t_version (id, pid, version, description, src_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_a_a_t_version (id, pid, version, description, src_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -7468,7 +7468,7 @@ COPY public.t_a_a_t_version (id, pid, version, description, src_path, status, cr
 -- Data for Name: t_a_a_template; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_a_a_template (id, pid, label, description, template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_a_a_template (id, pid, label, description, template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -7476,7 +7476,7 @@ COPY public.t_a_a_template (id, pid, label, description, template, status, creat
 -- Data for Name: t_account; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_account (id, pid, account_no, product_id, currency, balance, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_account (id, pid, account_no, product_id, currency, balance, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 e184c2926659a2c5eb748c04c0be6aca9e831caa08c8b		24099408	Saving		\N			2026-09-01 09:32:38.495		2026-09-01 09:32:38.495	
 cff247e86bf9b87990dc8276f1268daade74b2bae24d3	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296	9028802	Product dummy		\N			2026-09-02 11:07:30.881		2026-09-02 11:07:30.881	
 6c55a825b2f96d029f16e87ba975b51fa7a6e559fc3bc	ded4ee14322265cb66361c6fc166b18e8a0bd6c1a303f	90299289299	PRD00299		\N			2026-09-03 03:52:56.009		2026-09-02 20:52:56.009	
@@ -7489,7 +7489,7 @@ fe7648e9854b090dfbab4a39c14d249ddd6f784b32d26	809a0beba663cd15d69d760d8619adebbe
 -- Data for Name: t_address; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_address (id, pid, line1, line2, city, province, country, postal_code, address_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_address (id, pid, line1, line2, city, province, country, postal_code, address_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 dummyid	dummypid	line1	line2	Jakarta	Jakarta	Indonesia	\N	\N	\N	\N	\N	\N	\N	\N
 dummyid	dummypid	line1	line2	Jakarta	Jakarta	Indonesia	\N	\N	\N	\N	\N	\N	\N	\N
 dummyid	dummypid	line1	line2	Jakarta	Jakarta	Indonesia	\N	\N	\N	\N	\N	\N	\N	\N
@@ -7582,7 +7582,7 @@ dummyid	dummypid	line1	line2	Jakarta	Jakarta	Indonesia	\N	\N	\N	\N	\N	\N	\N	\N
 -- Data for Name: t_amgreat_apps; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_amgreat_apps (id, pid, label, description, iconid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_amgreat_apps (id, pid, label, description, iconid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 VAVBLNPJOQNQQOOHBKULKOCASUQVDPFCQSJQVYWKBCHKBELPLI		ECOMMERCE	ONLINE ECOMMERCE PRODUCT MANAGEMENT AND O2C	ICONID	ACTIVE	Batch	2024-09-10 23:13:57.586324		2024-09-10 23:13:57.586324	
 VTGSVLBIENFHNOITMDADYURMQKDIFIMVPPPMFWMYJLEWVNSOIB		PAYMENT GATEWAY	PAYMENT GATEWAY	ICONID	ACTIVE	Batch	2024-09-10 23:13:57.589459		2024-09-10 23:13:57.589459	
 SQPVNBWHHJHOQQCHEVTXOYMMBJNPODFIKUWFTGAANNVNODEMBG		LOAN ORIGINATING SYSTEM	LOAN ORIGINATING SYSTEM	ICONID	ACTIVE	Batch	2024-09-10 23:13:57.590812		2024-09-10 23:13:57.590812	
@@ -7604,7 +7604,7 @@ XSRCNOUNGVSVWEGSVSMGUBPOXMKRTJJYKKLHEOMRUFVJKPLLHF		Amgreat Portal	Amgreat Porta
 -- Data for Name: t_attribute_groups; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_attribute_groups (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_attribute_groups (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 DOJNPMSBDUABOCMYYVUJVBVGIVDJHYUBMIUIATVGINJTYYANIB		SEX	GENDER OF THE PEOPLE	ACTIVE	Batch	2024-09-08 16:16:03.376202		2024-09-08 16:16:03.376202	
 UMNNPYHSCEOGPBRXIWVMEINJHIRVCWQMUQRHLKBOBLBPSMSSHW		NATIONALITY	COUNTRY OF NATIONALITY OF THE PEOPLE	ACTIVE	Batch	2024-09-08 16:16:03.378366		2024-09-08 16:16:03.378366	
 CATFNOGCQNJJHQFJFJYTXNQBLTAQGTBKQTKTKBJRWEBNRTDWXS		PROVINCE	LOCATION OF THE PEOPLE	ACTIVE	Batch	2024-09-08 16:16:03.379031		2024-09-08 16:16:03.379031	
@@ -7631,7 +7631,7 @@ CGAHMGSQJOPRQCUNODGWTMKIFOHMWYPAPERAOTKYVROOYOBIPS		STATUS_ACTIVE_NONACTIVE	STAT
 -- Data for Name: t_attributes; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_attributes (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_attributes (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 FQOPRSFNHYNPMMVPUJOLAXDODTPAYARVIOCKBBGHPPMSPNSMFX	IJVAUFBGOYWKQXVCFCTWKYOIKKWKTHBXBCIBDARULWBIBXNSIM	SQL	Define SQL Scripts to pull the lists		Edited	2024-11-10 00:17:50.517939		2024-11-10 00:17:50.517939	\N
 VBMXLNXUGYEFJOXYWBWXPTITUCXCODLLYYRXJPKTXUNXQSDSYU	IJVAUFBGOYWKQXVCFCTWKYOIKKWKTHBXBCIBDARULWBIBXNSIM	Static Lists	Define statics lists, Option		Edited	2024-11-10 00:18:29.757642		2024-11-10 00:18:29.757642	\N
 WWFYVWAQDKELRMHBCWFBNEKUUSRJSNDIOHABMSKAJFTGJAVOLD	UUYVTWVRRRFDVBDNNDNKHIRFLUAWFJKJPYLJRKRVFNNCFTIPUW	ACTIVE	Status active means it is referable.		Edited	2024-11-10 00:22:08.895775		2024-11-10 00:22:08.895775	\N
@@ -7709,7 +7709,7 @@ TOROTITSGRKTPXCHBKUTIVMEPJSWNGTKAUSSOHINQCREUHNMKJ	CGAHMGSQJOPRQCUNODGWTMKIFOHMW
 -- Data for Name: t_business_transformation; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_business_transformation (id, pid, label, description, html_content, seqno, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_business_transformation (id, pid, label, description, html_content, seqno, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 782491d407ed055a673094842d0f36fd5823c059e305b		Education Organisation	Education Organisation		1		TEST	2026-09-26 08:46:06.007031		2026-09-26 08:46:06.007031	
 c8556aca0865762f59eafc72371a4f042dc0b92348aa9		Peer to Peer Lending	Peer to Peer Lending		2		TEST	2026-09-26 08:46:39.697866		2026-09-26 08:46:39.697866	
 16167463644b49bea653e22797f10b5accf605a41e139		Multi Finance	Multi Finance		3		TEST	2026-09-26 08:46:53.686691		2026-09-26 08:46:53.686691	
@@ -7726,7 +7726,7 @@ f298d920b9210c53c13fced534a0c21b816903924ff4f		Assurance Organisation	Assurance 
 -- Data for Name: t_card; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_card (id, pid, customer_id, account_id, card_no, card_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_card (id, pid, customer_id, account_id, card_no, card_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -7734,7 +7734,7 @@ COPY public.t_card (id, pid, customer_id, account_id, card_no, card_type, status
 -- Data for Name: t_col_list_map; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_col_list_map (id, pid, col_id, list_group_id, default_id, sql, status, createby, createddate) FROM stdin;
+COPY  t_col_list_map (id, pid, col_id, list_group_id, default_id, sql, status, createby, createddate) FROM stdin;
 45b925f8-a3eb-4392-9b6a-ebd257898dba	ROOT	53d93660-2263-4b36-9912-ea45276f0b09	821f7088-f1c2-4b09-9e5a-9e7bd3794350	21fb1f60-7647-4b31-9367-4a15ea2ebc57	\N	ACTIVE	\N	2026-08-28 23:16:05.683239
 ab918f19-d2d8-4ba5-9149-45abc41e92aa	ROOT	6a250445-6f2c-4894-a235-c103cd665fab	821f7088-f1c2-4b09-9e5a-9e7bd3794350	21fb1f60-7647-4b31-9367-4a15ea2ebc57	\N	ACTIVE	\N	2026-08-28 23:16:05.683239
 af1d9178-b296-4d5e-8daf-889f0c3c4988	ROOT	3da37a15-bb10-4dab-93a5-3c0920d2b444	821f7088-f1c2-4b09-9e5a-9e7bd3794350	21fb1f60-7647-4b31-9367-4a15ea2ebc57	\N	ACTIVE	\N	2026-08-28 23:16:05.683239
@@ -7855,7 +7855,7 @@ dcbc932579dc8d9b9483d43cf4bd3c132f6eb310a97a4		3ed63808-579d-405e-8911-2aff77733
 -- Data for Name: t_columns; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_columns (id, pid, label, description, data_type, template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_columns (id, pid, label, description, data_type, template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 FCUKNLFXXIFEYNWHMBDRTCPYVFVAJIUTLICJTRNXIGECDSSCAA		TEXT-MONEY	CAPTURE TEXT INPUT MONEY FROM BROWSER	decimal	<div class="grp"><div class="label-l1">[[label]]</div><div class="inputcss" id="div[[id]]"><input type="text" class="incommon inpdec" id="[[id]]" value="[[value]]"></div></div>	ACTIVE	Batch	2024-09-17 21:02:42.95172		2024-09-17 21:02:42.95172	
 ONTNWXHWXRENDGKBYUJEYEDQTORPPBWVLRTFLEGEWFLRCDRSVL		LIST	CAPTURE OPTED VALUE OF A LIST FROM BROWSER	str	<div class="grp"><div class="label-l1">[[label]]</div><div class="inputcss" id="div[[id]]"><select class="incommon inlists" id="[[id]]">[[value]]</select></div></div>	ACTIVE	Batch	2024-09-17 21:02:42.95315		2024-09-17 21:02:42.95315	
 NFLKPDJFXNSGMWMWXSJNNLCAURBAJEUITQAWNWHHVBWTVGEXDO		DATE	CAPTURE DATE VALUE FROM BROWSER	date	<div class="grp"><div class="label-l1">[[label]]</div><div class="inputcss" id="div[[id]]"><input class="incommon indate" type="date" id="[[id]]" value="[[value]]"></div></div>	ACTIVE	Batch	2024-09-17 21:02:42.953982		2024-09-17 21:02:42.953982	
@@ -7871,7 +7871,7 @@ MHDBPASQRNNGIWTUKJQTVOFQNTTWVLARUJMJYIDSBLCMKDDPUH		TEXT-FLOAT	CAPTURE TEXT-FLOA
 -- Data for Name: t_con_apps_forms_tab; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_con_apps_forms_tab (id, pid, label, formid, seqno, tab_level, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_con_apps_forms_tab (id, pid, label, formid, seqno, tab_level, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 NVGIJTNGQOPYNNXVMRALTOONTNLBYQHKWBVNWAXJDVOHGHIYJW	AIUBVGYAXHIVQQOVOFBMBDFBTOAPDJRBQOQUAVEOSSYOGLUCYM	Department	XQUJXFEFWQXGBDBDGIJIACMNEUTNBWHTATTJTQXXOFIAAPANMQ	1	1	UserID	2024-11-21 14:22:20.186327	\N	2024-11-21 14:22:20.186327	\N
 LPLTDPBWJYSRGVVBEXXMNIPMCECEMUHUUJXSCPBHMRGNXWCYWO	AIUBVGYAXHIVQQOVOFBMBDFBTOAPDJRBQOQUAVEOSSYOGLUCYM	Documents	DYWSFXWDTILLTDQSDJGPMPSWJQLSTUKDIMHCSIFOBMYCBVRDXB	2	1	UserID	2024-11-21 14:23:18.587527	\N	2024-11-21 14:23:18.587527	\N
 FFIUCXVRGPLBNCRUNUJNLFEVXFPNAYTFPNCSDFWPENWJNAKECR	AIUBVGYAXHIVQQOVOFBMBDFBTOAPDJRBQOQUAVEOSSYOGLUCYM	Peoples	XCKMEPGSFHUIQRRCPHHHWGHILBGKPXFEYPXLCJKLQQBPIJPGYX	3	1	UserID	2024-11-21 14:24:46.376419	UserID	2024-11-21 14:24:46.376419	\N
@@ -7933,7 +7933,7 @@ QJWTUNBFWANPDCXSPNHCVOOMLTJJJHLFXIOWQAPXIYFSVTOHAY	XSRCNOUNGVSVWEGSVSMGUBPOXMKRT
 -- Data for Name: t_contact; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_contact (id, pid, label, phone, email, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_contact (id, pid, label, phone, email, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -7941,7 +7941,7 @@ COPY public.t_contact (id, pid, label, phone, email, status, createdby, createdd
 -- Data for Name: t_content; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_content (id, pid, label1, desc1, label2, desc2, content, writername, seqno, status, createdby, createddate, updatedby, updateddate, delflag, menuid) FROM stdin;
+COPY  t_content (id, pid, label1, desc1, label2, desc2, content, writername, seqno, status, createdby, createddate, updatedby, updateddate, delflag, menuid) FROM stdin;
 MJMKDRKLQMMTOFXMXFQPSXKQUBXQMBKNGUFVAVUULETCTAPUUV	NYWULQOKHITTRLHUYEUETAVIGXRDWABBBCPRSRHGTQMVTKPPHX	Big Data	Open source frameworks/platform stacks	Big Data	Open source frameworks/platform stacks, such as: Hadoop, HDFS, Sparks, Hive, Flink, Kafka	1. Solution Context\n2. Technical Full Stacks\n2.1 Diagrams\n2.2 Tools for Big Data Open Source Technology Stacks\n2.2.1 Data Visualisation and SQL:\nA. Apache SOLR\nB. SQL Hive\n\n2.2.2 Databases\nA. CouchDB\nB. Cassandra\nC. MySQL\nD. MongoDB\n\n2.2.3 Data Warehouses\nA. Hive\nB. Apache HBase\n\n2.2.4 File System\nA. HDFS\n\n2.2.5 Workflow\nA. OOZIE\n\n2.2.6 Real Time Processing\nA. Flink\nB. Spark Stream\n\n2.2.7 Other Tools (Integration, Queries, Visualization)\nA. Spark\nB. QLIK\nC. Druid\nD. KAFKA\nE. Apache Pig\nF. Apache Poenix\n2.2.6 Storage/Data Centers\nA. Open Compute Projects\nB. OnPremise VMs\nC. Cloud VMs\nD. Hybrid Computes / VMs\n\n3. Delivery Mode\n3.1 OnPremise Data Center\n3.2 Cloud\n3.3 Hybrid\n\n4. Use Cases	Kristian Butar Butar	0		UserID	2024-12-11 15:40:54.901729	\N	2024-12-11 15:40:54.901729	\N	FJMDSEHHFDDJJLHSTEQKWGDOPORIVWHCWQIVXEELXGJJENTOJK
 NNQXLXMCMFVKCNQDYOHQXDMFDWIDRQCAETKDIRWVLCBNMRRMXM	NYWULQOKHITTRLHUYEUETAVIGXRDWABBBCPRSRHGTQMVTKPPHX	eCommerce, Merchants, Payments	250 chars	Tools, Integrations, Security, Data protection regulation		1. Channels\n2. Stacks\n3. Architecture\n4. tools		1		UserID	2024-12-04 00:35:58.614559	UserID	2024-12-04 00:35:58.614559	\N	EKHRLDYHFLBOULTJSOHXSGXOEVCGBQWAMEHEAUTKMLFNBEVBDN
 CDEPOAXFEAVHKRTNMQKVSENNODBJWBXVGBKTXPAIQKGHMANSAN	NYWULQOKHITTRLHUYEUETAVIGXRDWABBBCPRSRHGTQMVTKPPHX	Smart Home, Security Devices and Monitoring, Smart Offices	Integrated devices solution: sensor, identification/authorisation control, monitoring, alarm 	Tools, Integrations, Camera, Alarms			Kristian Butar Butar	2		UserID	2024-12-04 00:28:32.375945	UserID	2024-12-04 00:28:32.375945	\N	TPSMONNQDULJWERDXIAISFTHLDTNHUGLKXECLRIUFUXGFOUOUK
@@ -7984,7 +7984,7 @@ KBGGWNWVTGTFNXOFDUBGLQFKYARVMGEWDKKJAFUEMNNRTHNMGD	NYWULQOKHITTRLHUYEUETAVIGXRDW
 -- Data for Name: t_customer; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_customer (id, pid, customer_no, customer_name, classification_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_customer (id, pid, customer_no, customer_name, classification_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 ded4ee14322265cb66361c6fc166b18e8a0bd6c1a303f		3174091602998	Kristian butar-butar	98009	980		2026-08-24 16:47:14.067		2026-08-24 09:47:14.067	
 0af443e7a44ff681528d67c0fe16b55a7fe825ce13296		019009	Leonard	latinum			2026-09-02 10:58:24.007		2026-09-01 13:58:24	
 \.
@@ -7994,7 +7994,7 @@ ded4ee14322265cb66361c6fc166b18e8a0bd6c1a303f		3174091602998	Kristian butar-buta
 -- Data for Name: t_customer_account; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_customer_account (id, pid, customer_id, account_id, relationship_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_customer_account (id, pid, customer_id, account_id, relationship_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8002,7 +8002,7 @@ COPY public.t_customer_account (id, pid, customer_id, account_id, relationship_t
 -- Data for Name: t_device; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_device (id, pid, merchant_id, device_sn, device_model, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_device (id, pid, merchant_id, device_sn, device_model, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8010,7 +8010,7 @@ COPY public.t_device (id, pid, merchant_id, device_sn, device_model, status, cre
 -- Data for Name: t_document; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_document (id, pid, document_type, description, uri, status, createdby, createddate, updatedby, updateddate, delflag, file) FROM stdin;
+COPY  t_document (id, pid, document_type, description, uri, status, createdby, createddate, updatedby, updateddate, delflag, file) FROM stdin;
 FREIUYJQOLQSTXFUISLXQAVYYOWBUUORIBUGORBQOUKFNLTDEA		Transcript	Transcript			UserID	2024-11-23 00:53:10.121241	\N	2024-11-23 00:53:10.121241	\N	\N
 HSWYWVYUWEGYSIOCSUGFBKGOLFGWDGHUHATFKGNKGGCJSFIYWD		CERTIFICATE	CERTIFICATE			UserID	2024-11-23 00:53:37.48804	\N	2024-11-23 00:53:37.48804	\N	\N
 GBLEMJXHUVJLFODFGAADTBYAYCJQJSJPKQBYEAVKORWRHRHYXE	PKHCRWNPFNMHXYLKEYRUOKLATYUCNTDPCMEOKCOJLCYVWAKXKT	doc 1111	doc 1111	uri 1111		UserID	2024-11-24 23:17:56.473353	\N	2024-11-24 23:17:56.473353	\N	\N
@@ -8040,7 +8040,7 @@ bcb4150b4831d6bae59e44dc6d34133d724df850fa4ab	ded4ee14322265cb66361c6fc166b18e8a
 -- Data for Name: t_emp_achievement; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_emp_achievement (id, pid, employee_id, achievement_name, achievement_year, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_emp_achievement (id, pid, employee_id, achievement_name, achievement_year, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8048,7 +8048,7 @@ COPY public.t_emp_achievement (id, pid, employee_id, achievement_name, achieveme
 -- Data for Name: t_emp_assignment; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_emp_assignment (id, pid, employee_id, location_id, assigned_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_emp_assignment (id, pid, employee_id, location_id, assigned_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8056,7 +8056,7 @@ COPY public.t_emp_assignment (id, pid, employee_id, location_id, assigned_date, 
 -- Data for Name: t_emp_experience; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_emp_experience (id, pid, employee_id, company_name, "position", start_date, end_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_emp_experience (id, pid, employee_id, company_name, "position", start_date, end_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8064,7 +8064,7 @@ COPY public.t_emp_experience (id, pid, employee_id, company_name, "position", st
 -- Data for Name: t_employee; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_employee (id, pid, emp_no, emp_name, department_id, role_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_employee (id, pid, emp_no, emp_name, department_id, role_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8072,7 +8072,7 @@ COPY public.t_employee (id, pid, emp_no, emp_name, department_id, role_id, statu
 -- Data for Name: t_f_col_sql; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_f_col_sql (id, pid, sql, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_f_col_sql (id, pid, sql, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -8080,7 +8080,7 @@ COPY public.t_f_col_sql (id, pid, sql, status, createdby, createddate, updatedby
 -- Data for Name: t_file; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_file (id, pid, label, description, status, uri, createdby, createddate, updatedby, updateddate, delflag, seqno) FROM stdin;
+COPY  t_file (id, pid, label, description, status, uri, createdby, createddate, updatedby, updateddate, delflag, seqno) FROM stdin;
 \.
 
 
@@ -8088,7 +8088,7 @@ COPY public.t_file (id, pid, label, description, status, uri, createdby, created
 -- Data for Name: t_form; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_form (id, pid, label, description, tablename, issql, sqlid, status, createdby, createddate, updatedby, updateddate, delflag, orderby, groupby, filetemplate) FROM stdin;
+COPY  t_form (id, pid, label, description, tablename, issql, sqlid, status, createdby, createddate, updatedby, updateddate, delflag, orderby, groupby, filetemplate) FROM stdin;
 VNBSHQXYCQFLYNQVCMXSGWNLGHGNAQEAYJIOVVQFOKGYXBAUDQ		T_FORM	decription of  t_form	t_form	false		21fb1f60-7647-4b31-9367-4a15ea2ebc57	edit and save	\N		2026-08-24 03:48:26.427				console.jsp
 FORM_EMP_01	\N	Analytics	Analytics decription	employees					\N		2026-10-01 15:29:46.593116				
 BIWRQGMDUPGPGBYCRDPEUMGRMWIQGTCLKTKXTCEPSDFGWTSLET		edit and save Console Applications Forms and Tabs	to link applications and menu tab for console data relation configurations	t_con_apps_forms_tab	LEEHKDXWHRUVEBJEBKGEFSPKJLTPUOYBSDGYDHPNHJTCGNSDJM		21fb1f60-7647-4b31-9367-4a15ea2ebc57	UserID	2024-11-21 13:53:03.114989	UserID	2024-11-20 09:53:03.114	21fb1f60-7647-4b31-9367-4a15ea2ebc57	segno		console.jsp
@@ -8239,7 +8239,7 @@ d2693847-b291-415c-b683-d66c2acaf3f6	ROOT	Portal Users	Management of portal user
 -- Data for Name: t_form_actions; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
-COPY public.t_form_actions (id, pid, label, type, hint, status, icon, actionname, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_form_actions (id, pid, label, type, hint, status, icon, actionname, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 687255b3-4f15-436a-952f-777228b18ede	BIWRQGMDUPGPGBYCRDPEUMGRMWIQGTCLKTKXTCEPSDFGWTSLET	New	button	\N	\N	\N	doNew	\N	\N	\N	\N	\N
 c30c37ad-1cb3-4b7e-b322-bd5ce00824f4	YAWSHEBGGQVLIOKVEEVKQUVTDDXOPGBHPGLEOOFJMIDSRLYCCQ	New	button	\N	\N	\N	doNew	\N	\N	\N	\N	\N
 46707edc-cfb1-4294-ac9c-8ecb3bb5f669	YYDUSQBNYCNFDEUDNXSBTAMTUCKDLJXNORAKSOTQRYBJHVIMSJ	New	button	\N	\N	\N	doNew	\N	\N	\N	\N	\N
@@ -8427,7 +8427,7 @@ d16a5be9-1357-4a02-874b-ba5733b3d951	20251115204312296ef66076043cd463cbfd944e	Up
 -- Data for Name: t_form_columns; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_form_columns (id, pid, label, t_col_id, tbl_col_nm, seqno, iseditable, def_val, issql, is_attribute_list, sqlid, attribute_grp_id, nullable, maxlength, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_form_columns (id, pid, label, t_col_id, tbl_col_nm, seqno, iseditable, def_val, issql, is_attribute_list, sqlid, attribute_grp_id, nullable, maxlength, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 TYVKCWRIDUXSQUINIFAUBCDTPUVHVJGAOPLATTVEGPFPVLUHPF	YTWUUXGGSMCJXPSWMIONGBLOMEILAKJGCVPDJNYHOOACPPJOSE	template	HDISRMQKJUYWLPRHLYJHQOCHXQXSGVIOKTEXXTTQFMYHDUBCIY	template	5	LEEHKDXWHRUVEBJEBKGEFSPKJLTPUOYBSDGYDHPNHJTCGNSDJM							0		EDITOR	\N		\N	\N
 NQUWLMSVWASBVYAOWNLGKVSKOEBLMTOKQHLNBPABAPCKWMTHHD	YYDUSQBNYCNFDEUDNXSBTAMTUCKDLJXNORAKSOTQRYBJHVIMSJ	template	HDISRMQKJUYWLPRHLYJHQOCHXQXSGVIOKTEXXTTQFMYHDUBCIY	template	6	LEEHKDXWHRUVEBJEBKGEFSPKJLTPUOYBSDGYDHPNHJTCGNSDJM	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 PSKOYCIMTRPRROESHVMYSHJFCPHXPQLVBSVOTNTWMLXKTKKHXL	YTWUUXGGSMCJXPSWMIONGBLOMEILAKJGCVPDJNYHOOACPPJOSE	label	UQAKDCMTDSAJUCUNUAGQNFKVIFVUTRBKQGNQFWPGFIBVAXVAVB	label	3	LEEHKDXWHRUVEBJEBKGEFSPKJLTPUOYBSDGYDHPNHJTCGNSDJM							0		EDITOR	2024-10-29 00:00:00		2024-10-29 00:00:00	\N
@@ -8958,7 +8958,7 @@ VXNFDYRNSTWNDHYRWXVWKQGUBLRKUABOUFCKNKPHGUXNVUDFLC	AVHLMBYQNLXYHLAIHWRRBHXBRPDEO
 -- Data for Name: t_form_template; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_form_template (id, pid, viewtype, view_template, defaultscreen, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_form_template (id, pid, viewtype, view_template, defaultscreen, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 JUUKJPEPYWLEGJCHULQEKJVARNPGKOXUIAYHQWMSLVJNUWCPBG	DDYGPGTPNWQEYIVJPFCVJQGSXGSQYVMCKVRVSKYNKWEWHPLGWG	viewtype0001	\N	\N	\N	\N	\N	\N	\N	\N
 KDMSYYTPWYEHIAPIIIPTTDMMYKFDRQAGYXWLUEHTBUYHDBNJQB	DDYGPGTPNWQEYIVJPFCVJQGSXGSQYVMCKVRVSKYNKWEWHPLGWG	viewtype0003	\N	\N	\N	\N	\N	\N	\N	\N
 IIBJESJVMBSVXHAWJAVWEFXAWDIPTMJBLIWURFKXPVVAMBFMFH	DDYGPGTPNWQEYIVJPFCVJQGSXGSQYVMCKVRVSKYNKWEWHPLGWG	viewtype0004	\N	\N	\N	\N	\N	\N	\N	\N
@@ -9288,7 +9288,7 @@ CHLOMBHWFRMHWFIFEMNSBDXEAGGROIKTJRIHMYQLQKYMHJNKDU	XSRCNOUNGVSVWEGSVSMGUBPOXMKRT
 -- Data for Name: t_form_template_temp; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_form_template_temp (id, pid, viewtype, view_template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_form_template_temp (id, pid, viewtype, view_template, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 amgreatappmenu1	amgreatappsid	viewtype0001	<div class=linkparentcss >[[ReplaceCmd]]<img src =http://localhost:8091/svg/check-2.svg /><div id=[[__ID]]  class=linkcss targetpop=thisid actiongo=__fpagel params=thisid >[[__LABEL]]</div>[[ENDReplaceCmd]]</div>	\N	\N	\N	\N	\N	\N
 t_form_template_form_list_1	t_form_list_1	viewtype0001	<div class=mnlinkparentcss >[[ReplaceCmd]]<img src =http://localhost:8091/svg/check-2.svg /><div id=[[__ID]] class=mnlinkcss targetpop=__content__  actiongo=__fpageself params=http://localhost:8091/erp >[[__LABEL]]</div>[[ENDReplaceCmd]]</div>	\N	\N	\N	\N	\N	\N
 JUUKJPEPYWLEGJCHULQEKJVARNPGKOXUIAYHQWMSLVJNUWCPBG	DDYGPGTPNWQEYIVJPFCVJQGSXGSQYVMCKVRVSKYNKWEWHPLGWG	viewtype0001	\N	\N	\N	\N	\N	\N	\N
@@ -9520,7 +9520,7 @@ EXAIADJDHKIGALYGGAJKPMEXSPVTQRAGDWNBCNQVYDWODKMDBA	t_form_list_1	viewtype0006	\N
 -- Data for Name: t_group; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_group (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_group (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 fdec1bda-1fa9-46ca-95bb-1ec5b276828e	ROOT	Country	Group definition for Country	ACTIVE	SYSTEM	2026-08-09 00:22:15.925036	SYSTEM	2026-08-09 00:22:15.925036	0
 2f29070b-472b-47dc-bb34-3961473ed851	ROOT	Province	Group definition for Province	ACTIVE	SYSTEM	2026-08-09 00:22:15.925036	SYSTEM	2026-08-09 00:22:15.925036	0
 c41eaf5d-46ad-45b2-b388-a010448ee3dc	ROOT	Sex	Group definition for Sex	ACTIVE	SYSTEM	2026-08-09 00:22:15.925036	SYSTEM	2026-08-09 00:22:15.925036	0
@@ -9571,7 +9571,7 @@ f48b1111-0010-4000-8000-000000000010	ROOT	Roles	Master data parameter group for 
 -- Data for Name: t_group_members; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_group_members (id, pid, personid, description, status, createdby, createddate, updatedby, updateddate, delflag, seq) FROM stdin;
+COPY  t_group_members (id, pid, personid, description, status, createdby, createddate, updatedby, updateddate, delflag, seq) FROM stdin;
 cb741741-4ce2-4ece-bb27-0608924f4cfa	561b11ab-6484-4e59-8f5b-b29759811b86	KTP	Group member KTP (Kartu Tanda Penduduk) for group ID Type	ACTIVE	SYSTEM	2026-08-09 00:30:58.850926	SYSTEM	2026-08-09 00:30:58.850926	0	\N
 9b34f82b-7680-442e-a944-081b71dbad36	561b11ab-6484-4e59-8f5b-b29759811b86	PASSPORT	Group member PASSPORT (International Passport) for group ID Type	ACTIVE	SYSTEM	2026-08-09 00:30:58.850926	SYSTEM	2026-08-09 00:30:58.850926	0	\N
 f37efaec-13fb-44e2-868c-46399015fb4f	561b11ab-6484-4e59-8f5b-b29759811b86	SIM	Group member SIM (Surat Izin Mengemudi) for group ID Type	ACTIVE	SYSTEM	2026-08-09 00:30:58.850926	SYSTEM	2026-08-09 00:30:58.850926	0	\N
@@ -9683,7 +9683,7 @@ m020-03	f48b1111-0020-4000-8000-000000000020	DEPT_CREDIT	Credit & Risk Managemen
 -- Data for Name: t_ht_address; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_address (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, line_1, line_2, line_3, city, province, country, postal_code) FROM stdin;
+COPY  t_ht_address (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, line_1, line_2, line_3, city, province, country, postal_code) FROM stdin;
 36fa2a5ba2aeafb0265aa0e52a66e4aa60843a3258441	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:22:38.676356		2026-09-15 10:22:38.676356		jln Merdeka No 1	Jakarta Timur	Jakarta				13910
 03931bebda00eb44c7c426ee7e3584df7c35748ce9802	bc85474f6ba7a214d0fcd1df4730fe99c19e003cacf7c			2026-09-16 14:17:47.466389		2026-09-16 14:17:47.466389		Jalan Jagakarsa 78	Jakarta Timur	Jakarta	Jakarta Timur	Jakarta	Indonesia	13910
 \.
@@ -9693,7 +9693,7 @@ COPY public.t_ht_address (id, pid, status, createdby, createddate, updatedby, up
 -- Data for Name: t_ht_assets; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_assets (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, asset_name_1, asset_name_2, dimension, weight, description, price, buy_date, received_date, use_until_date, warranty, brand_name, vendor_name, water_resistance, received_by, utilized_by) FROM stdin;
+COPY  t_ht_assets (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, asset_name_1, asset_name_2, dimension, weight, description, price, buy_date, received_date, use_until_date, warranty, brand_name, vendor_name, water_resistance, received_by, utilized_by) FROM stdin;
 6b59edf3368637456d4118c4514c40eeb2b726ed44d47	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:24:24.192227		2026-09-15 10:24:24.192227		Glass	1	100	100.00	100 stocks	10000.00	2026-09-03	2026-09-18	2026-09-16	1	Makarel	Makmur Jaya	t	8839872	
 \.
 
@@ -9702,7 +9702,7 @@ COPY public.t_ht_assets (id, pid, status, createdby, createddate, updatedby, upd
 -- Data for Name: t_ht_building; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_building (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, building_name_1, building_name_2, description) FROM stdin;
+COPY  t_ht_building (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, building_name_1, building_name_2, description) FROM stdin;
 \.
 
 
@@ -9710,7 +9710,7 @@ COPY public.t_ht_building (id, pid, status, createdby, createddate, updatedby, u
 -- Data for Name: t_ht_coa; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_coa (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, account_no, account_type, balance_in, balance_out, current_balance, bank_account, bank_name, staff_id) FROM stdin;
+COPY  t_ht_coa (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, account_no, account_type, balance_in, balance_out, current_balance, bank_account, bank_name, staff_id) FROM stdin;
 55c1092decb42cae99af9eef2fbeece9865326e2db798	94f21fc3982aff44e8a2a17aec157699166bd7e0ac534			2026-09-14 17:48:57.577516		2026-09-14 17:48:57.577516		205890009	Receivable	1000000.00	0.00	200000.00	98200998	BCA	920981
 c62a66a18cf7dd9f91b86c8a672a0f5475a3c8bf8ed38	94f21fc3982aff44e8a2a17aec157699166bd7e0ac534			2026-09-14 17:49:39.331723		2026-09-14 17:49:39.331723		20993891	Payable	200000000.00	0.00	20000000.00	02999188888	BRI	988877
 \.
@@ -9720,7 +9720,7 @@ c62a66a18cf7dd9f91b86c8a672a0f5475a3c8bf8ed38	94f21fc3982aff44e8a2a17aec15769916
 -- Data for Name: t_ht_contact; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_contact (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, contact_type, email_1, email_2, phone_no_1, phone_no_2, mobile_no_1, mobile_no_2) FROM stdin;
+COPY  t_ht_contact (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, contact_type, email_1, email_2, phone_no_1, phone_no_2, mobile_no_1, mobile_no_2) FROM stdin;
 42dbd3ce5cd2af8ca47158f78b1478172da6b27c08ee1	94f21fc3982aff44e8a2a17aec157699166bd7e0ac534			2026-09-14 17:48:01.804887		2026-09-14 17:48:01.804887			support@prapanca.com		0219992878		089288377266	
 7ccf0eeabf9f96e7cc9d902c410eda8abe118f4142647	bc85474f6ba7a214d0fcd1df4730fe99c19e003cacf7c			2026-09-16 14:17:06.062831		2026-09-16 14:17:06.062831		092888399288	tenant@gmail.com					
 \.
@@ -9730,7 +9730,7 @@ COPY public.t_ht_contact (id, pid, status, createdby, createddate, updatedby, up
 -- Data for Name: t_ht_customers; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_customers (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, date_of_birth, sex_type, age, marital_status, latest_education, customer_type, nationality) FROM stdin;
+COPY  t_ht_customers (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, date_of_birth, sex_type, age, marital_status, latest_education, customer_type, nationality) FROM stdin;
 a316642abe9febd400e41a235a9a95c5f7eac39926034	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:20:23.21646		2026-09-15 10:20:23.21646		Kristian	Butar			2026-09-17	Male	42	Maried	S2	Platinum	Indonesia
 \.
 
@@ -9739,7 +9739,7 @@ a316642abe9febd400e41a235a9a95c5f7eac39926034	a130bc0582426ef6c5fb83e1f07969ae31
 -- Data for Name: t_ht_hotel; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_hotel (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, hotel_name, total_rooms, stars, hotel_group_name, description) FROM stdin;
+COPY  t_ht_hotel (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, hotel_name, total_rooms, stars, hotel_group_name, description) FROM stdin;
 94f21fc3982aff44e8a2a17aec157699166bd7e0ac534				2026-09-14 14:08:51.39983		2026-09-14 14:08:51.39983		test 1	200	3	test	
 a130bc0582426ef6c5fb83e1f07969ae310db63a70628				2026-09-14 18:01:50.265828		2026-09-14 18:01:50.265828		Bakkara Hotel 1	100	3	Bakkara	Bakkara Family
 \.
@@ -9749,7 +9749,7 @@ a130bc0582426ef6c5fb83e1f07969ae310db63a70628				2026-09-14 18:01:50.265828		202
 -- Data for Name: t_ht_menu; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_menu (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, food_type, name_line_1, name_line_2, description, price, available_status, discount, spicy_status) FROM stdin;
+COPY  t_ht_menu (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, food_type, name_line_1, name_line_2, description, price, available_status, discount, spicy_status) FROM stdin;
 80f93f4eabbed94fae07c0bfbf974f8d62956f4e5674c	94f21fc3982aff44e8a2a17aec157699166bd7e0ac534			2026-09-14 17:47:22.100779		2026-09-14 17:47:22.100779		Meal	Indomie		with eggs	20000.00	available	\N	
 95589001907696d240e3e6828411332f4413ce8f69630	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-14 23:27:55.397134		2026-09-14 23:27:55.397134		Meal	Fried Chicken	Fried Chicken	Fried Chicken	20099.00	Yes	0.00	Spicy L 1
 \.
@@ -9759,7 +9759,7 @@ COPY public.t_ht_menu (id, pid, status, createdby, createddate, updatedby, updat
 -- Data for Name: t_ht_orders; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_orders (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, stay_from_date, stay_to_date, channel_code, staff_id, daily_price, monthly_price, annual_price, total_price, tax_amount, payment_status) FROM stdin;
+COPY  t_ht_orders (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, stay_from_date, stay_to_date, channel_code, staff_id, daily_price, monthly_price, annual_price, total_price, tax_amount, payment_status) FROM stdin;
 8e34f2542480f8351da5b543f032cf1a4ebfa8a3e46aa	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:25:19.334615		2026-09-15 10:25:19.334615		2026-09-16	2026-09-19	1	839900	\N	1200000.00	2000000.00	\N	\N	
 \.
 
@@ -9768,7 +9768,7 @@ COPY public.t_ht_orders (id, pid, status, createdby, createddate, updatedby, upd
 -- Data for Name: t_ht_payment_history; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_payment_history (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, received_date, payment_type, card_no, transaction_no, bank_issuer, amount_received, payment_status, paid_by, received_by_staff_id) FROM stdin;
+COPY  t_ht_payment_history (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, received_date, payment_type, card_no, transaction_no, bank_issuer, amount_received, payment_status, paid_by, received_by_staff_id) FROM stdin;
 1295e42eed17329237c5f0329974d9df8cd3b0de87e02	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-14 18:28:02.700839		2026-09-14 18:28:02.700839		\N	Vendor code msjsjs	298202000	8292020	BCA	\N	930029	Finance - Rita	
 1f08894212509908172d531069a20a1682e1c13fdce5e	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-14 23:22:05.672153		2026-09-14 23:22:05.672153		2026-09-13	vendor payment	92889000299	8929827	BCA	$200,999,999.00	paid		
 acccf77a59affaf2c4fb2b2b73f4838dbce3205a4a06d	a130bc0582426ef6c5fb83e1f07969ae310db63a70628	paid		2026-09-14 23:23:18.794228		2026-09-14 23:23:18.794228		\N	vendor payment	18299287373737		BRI	$2,000,999.00	paid		
@@ -9780,7 +9780,7 @@ acccf77a59affaf2c4fb2b2b73f4838dbce3205a4a06d	a130bc0582426ef6c5fb83e1f07969ae31
 -- Data for Name: t_ht_rooms; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_rooms (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, room_type, no_of_toilet, balkon, bath_tube, shower, tv, dimension, max_people_in_the_room, bed_type, window_view, description) FROM stdin;
+COPY  t_ht_rooms (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, room_type, no_of_toilet, balkon, bath_tube, shower, tv, dimension, max_people_in_the_room, bed_type, window_view, description) FROM stdin;
 d34dd247d70c1c19470a63f655f16cc8d184a01203246	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:21:43.09677		2026-09-15 10:21:43.09677		Studio	1	t	t	t	t	20	2		Lake	
 \.
 
@@ -9789,7 +9789,7 @@ d34dd247d70c1c19470a63f655f16cc8d184a01203246	a130bc0582426ef6c5fb83e1f07969ae31
 -- Data for Name: t_ht_staff; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_staff (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, latest_education_level, experience_in_years, mothers_maiden_name, reference_name, reference_contact, email_address, date_of_birth, birth_location, nationality) FROM stdin;
+COPY  t_ht_staff (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, latest_education_level, experience_in_years, mothers_maiden_name, reference_name, reference_contact, email_address, date_of_birth, birth_location, nationality) FROM stdin;
 \.
 
 
@@ -9797,7 +9797,7 @@ COPY public.t_ht_staff (id, pid, status, createdby, createddate, updatedby, upda
 -- Data for Name: t_ht_tenants; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_ht_tenants (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, sex, birth_of_date, birth_location, nationality, email, age, marital_status) FROM stdin;
+COPY  t_ht_tenants (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, sex, birth_of_date, birth_location, nationality, email, age, marital_status) FROM stdin;
 bc85474f6ba7a214d0fcd1df4730fe99c19e003cacf7c	a130bc0582426ef6c5fb83e1f07969ae310db63a70628			2026-09-15 10:26:58.715831		2026-09-15 10:26:58.715831		Docle	Antanami			Male	1991-09-06	Medan	Indonesia	corpu@gmail.com	41	
 \.
 
@@ -9806,7 +9806,7 @@ bc85474f6ba7a214d0fcd1df4730fe99c19e003cacf7c	a130bc0582426ef6c5fb83e1f07969ae31
 -- Data for Name: t_html_editor; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_html_editor (id, pid, file, source, status, createdby, createddate, updatedby, updateddate) FROM stdin;
+COPY  t_html_editor (id, pid, file, source, status, createdby, createddate, updatedby, updateddate) FROM stdin;
 133fe5e16c77ca40f22f97365e30d7fc572407f589d80	\N	\N	\N	true	\N	2026-09-11 10:05:29.596653	\N	2026-09-11 10:05:29.596653
 119246bbc379f7e384d27e143555626bae767d9d2eebc	\N	\N	\N	true	\N	2026-09-12 16:28:31.803568	\N	2026-09-12 16:28:31.803568
 fcac133ac519c5b8f747a7b7ed392eb5e2c9b2277dc77	\N	\N	\N	true	\N	2026-09-12 18:43:29.570701	\N	2026-09-12 18:43:29.570701
@@ -9828,7 +9828,7 @@ a9a7e926a69fad7ac176c22495c1dc395c85afe676193	\N	\N	\N	true	\N	2026-09-26 14:43:
 -- Data for Name: t_icons; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_icons (id, pid, icon, label, description, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_icons (id, pid, icon, label, description, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 cf001899-b20d-4e03-91ce-acb74f7e02f3	system	glass	Glass	FontAwesome icon glass	system	2026-09-13 00:07:27.312479	\N	\N	N
 01157089-06b6-46cf-99f3-e6d8e8706bdd	system	music	Music	FontAwesome icon music	system	2026-09-13 00:07:27.312479	\N	\N	N
 d70f0134-99ad-4de7-9929-34c523c98b93	system	search	Search	FontAwesome icon search	system	2026-09-13 00:07:27.312479	\N	\N	N
@@ -10362,7 +10362,7 @@ d8455518-b0cf-493f-9511-5cb8cd5d3967	system	wpexplorer	Wpexplorer	FontAwesome ic
 -- Data for Name: t_list_sql; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_list_sql (id, pid, description, sql, status, createdby, createddate, updatedby, updateddate) FROM stdin;
+COPY  t_list_sql (id, pid, description, sql, status, createdby, createddate, updatedby, updateddate) FROM stdin;
 c9822171a47c7338970da5b02d675fe96a0e6e107492c		deskripsi entry new	select col_name from t_t_cols_def	new		\N		\N
 \.
 
@@ -10371,7 +10371,7 @@ c9822171a47c7338970da5b02d675fe96a0e6e107492c		deskripsi entry new	select col_na
 -- Data for Name: t_lov; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_lov (id, pid, label, name, lovsource, detail, iscached, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_lov (id, pid, label, name, lovsource, detail, iscached, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 XHQMLFNXWTMXYGVVRIAOWPVOOAEFXLRMLSQNCIHMCBRNDYPNPY		Forms	formlists		select id, label from t_form			2024-11-11 12:46:47.372493		2024-11-11 12:46:47.372493	
 FWKAUSQDUIHPBXTESUMJCYEQYQYYIBWJCKVKRLJAGKJIAQQXBK		LOV Source	LOVSOURCE		select ID,Label from T_ATTRIBUTES where PID= 'IJVAUFBGOYWKQXVCFCTWKYOIKKWKTHBXBCIBDARULWBIBXNSIM'		Edited	2024-11-11 12:33:28.190127		2024-11-11 12:33:28.190127	
 PPXJIBNDENVGKFJJCLNGRFLTYIHODICYGRNSNHTCYNCHJPUVSG		iscached	yesnoflag		select id, label from t_attributes where pid= 'UVJTSFEDVWBALKHBGDGRRPPKPXTIVVHVCMQTXYXYKOTWHQUBUS'			2024-11-11 12:36:04.047424		2024-11-11 12:36:04.047424	
@@ -10394,7 +10394,7 @@ GNHXJGRTNYMBWIEQHTFCBAOQMBBGXCHRHQYNFJBLBAPTWBFKAN	QJWTUNBFWANPDCXSPNHCVOOMLTJJJ
 -- Data for Name: t_menu; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_menu (id, pid, menu_level, label, description, formid, icon, status, createdby, createddate, updatedby, updateddate, delflag, seqno) FROM stdin;
+COPY  t_menu (id, pid, menu_level, label, description, formid, icon, status, createdby, createddate, updatedby, updateddate, delflag, seqno) FROM stdin;
 FRFVPLQDRMROQXSLILRMJQDJGJSIDPYTKGSYVMSVNAQYQRYLYP		1	Produk	\N		\N	\N	UserID	2024-12-03 19:42:25.210821	\N	2024-12-03 19:42:25.210821	\N	1
 AYWPDBWNOPJJBCEGRKSITDXESELOCBDQMXIQEPBEPUWIDWAEQM		1	Produk	\N		\N	\N	UserID	2024-12-03 20:29:15.478976	\N	2024-12-03 20:29:15.478976	\N	1
 DPXJDEMOBOROSYKMTFWOOQJOMKKEMAXCJSLXUUSJHRNLCXGUMH	AIUBVGYAXHIVQQOVOFBMBDFBTOAPDJRBQOQUAVEOSSYOGLUCYM	1	TOP RIGHT MENU	TOP Right Menu contain: Login, User Info, Notification		Menu Icon	ACTIVE	EDITED	2024-11-03 23:51:22.829694		2024-11-03 23:51:22.829694	\N	\N
@@ -10436,7 +10436,7 @@ CBGUOPEWCYQSYWQAATINJVDPMDBAMNBHKRHQKDGFFKJLWVUVKQ	QJWTUNBFWANPDCXSPNHCVOOMLTJJJ
 -- Data for Name: t_merchant; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_merchant (id, pid, merchant_no, merchant_name, merchant_class_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_merchant (id, pid, merchant_no, merchant_name, merchant_class_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 809a0beba663cd15d69d760d8619adebbea1542110a4d		M0092	Merchant 01			new and saved	2026-09-01 15:02:18.072		2026-09-01 15:02:18.072	
 af464897c6ee03c71de983ae56f40c5fd48e57885dd9b		M003	merchant 03				2026-09-02 07:40:25.291		2026-09-02 07:40:25.291	
 \.
@@ -10446,7 +10446,7 @@ af464897c6ee03c71de983ae56f40c5fd48e57885dd9b		M003	merchant 03				2026-09-02 07
 -- Data for Name: t_merchant_account; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_merchant_account (id, pid, merchant_id, account_id, settlement_flag, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_merchant_account (id, pid, merchant_id, account_id, settlement_flag, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10454,7 +10454,7 @@ COPY public.t_merchant_account (id, pid, merchant_id, account_id, settlement_fla
 -- Data for Name: t_mn; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_mn (id, pid, label, description, status, level, seqno, formid, target_tsx, root_menu, pub_tsx, icon) FROM stdin;
+COPY  t_mn (id, pid, label, description, status, level, seqno, formid, target_tsx, root_menu, pub_tsx, icon) FROM stdin;
 dab242172ad30b15461817ece7c915affdb47b4ef7dda	f47ac10b-58cc-4372-a567-0e02b2c3d4e5	Column and List Mapping			2	\N	918f865e-744b-440a-bd5d-85109e8c3e1e	ObjectRecords.tsx	f47ac10b-58cc-4372-a567-0e02b2c3d4e5		th-list
 60e144d8-bfc4-48e7-a595-f940dab5a296	\N	Table Columns Definition	Table Columns Definition Desc		1	\N	31071f72-7bdc-4140-a505-39eccbdef7e9	ObjectRecords.tsx			globe
 55c71a0df9f87cf21e9215bfe55ca88544125e9d837a0	f47ac10b-58cc-4372-a567-0e02b2c3d4e5	Table Columns Definition			2	\N	31071f72-7bdc-4140-a505-39eccbdef7e9	ObjectRecords.tsx	f47ac10b-58cc-4372-a567-0e02b2c3d4e5		list-alt
@@ -10596,7 +10596,7 @@ d44f9bc1-4d4c-4682-af5c-7d87187cb8bb	f2b7a901-c8d3-4a52-b1e4-86d91c2f3e04	User M
 -- Data for Name: t_mon_chat_node_cluster; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_mon_chat_node_cluster (id, scan_timestamp, application_name, status, pid, description, isrunning) FROM stdin;
+COPY  t_mon_chat_node_cluster (id, scan_timestamp, application_name, status, pid, description, isrunning) FROM stdin;
 1	2026-09-26 23:51:01	chat_server_cluster node 9001	start	2283	Application is running normally	t
 2	2026-09-26 23:51:01	chat_server_cluster node 9002	start	2305	Application is running normally	t
 3	2026-09-26 23:51:01	chat_server_cluster voice 9010	off	-1	Application not found in ps -ef, restarting...	f
@@ -10642,7 +10642,7 @@ COPY public.t_mon_chat_node_cluster (id, scan_timestamp, application_name, statu
 -- Data for Name: t_object_uploaded; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_object_uploaded (id, pid, status, createdby, createddate, updatedby, updateddate) FROM stdin;
+COPY  t_object_uploaded (id, pid, status, createdby, createddate, updatedby, updateddate) FROM stdin;
 6931e6a2b69d02fe1fcd13739d200d2f302dea7724b47	\N	true	\N	2026-09-05 13:41:26.593118	\N	2026-09-05 13:41:26.593118
 57fe1237faf4b6165128885a136d92a47f934e0dafb43	\N	true	\N	2026-09-05 14:28:24.037747	\N	2026-09-05 14:28:24.037747
 ffd995a47ad1799e48ac91b06f440505e8a3d39900f47	\N	true	\N	2026-09-05 15:17:46.77792	\N	2026-09-05 15:17:46.77792
@@ -10765,7 +10765,7 @@ bbb8d4550c5f26f172e20338774926f029da325f43c51	\N	true	\N	2026-10-04 10:06:01.334
 -- Data for Name: t_org_function; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_org_function (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_org_function (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10773,7 +10773,7 @@ COPY public.t_org_function (id, pid, label, description, status, createdby, crea
 -- Data for Name: t_org_function_dept; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_org_function_dept (id, pid, label, lvl1_menuid, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_org_function_dept (id, pid, label, lvl1_menuid, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 DXPVEOWBRQBKJICGXRBSLOFBUUGEMFXWBNYVJJVHQCHQYWILWM		IT	1	Divisi IT			2024-11-19 13:31:00.434419		2024-11-19 13:31:00.434419	\N
 CGLBJYLCCNXIOPVTMXIUXFGLKLPJDCHMRUNGWPBYJUAHMHWOYQ		Sales	1	Divisi Sales			2024-11-19 13:30:24.34562		2024-11-19 13:30:24.34562	\N
 COQDXGYMSDEYLUFLGGKRTBGJROODLDSXRFWRUYYPORBVXKVAIN		Marketing	1	Divisi Marketing			2024-11-19 13:30:39.671055		2024-11-19 13:30:39.671055	\N
@@ -10808,7 +10808,7 @@ AMDEAOCYUSKVPRWKCOMUHTXHCKAOPCQQMOCULHWVUGUIJGGMLS	FREIXIMKUHRGCCTPSMMIPNITEVBQG
 -- Data for Name: t_org_function_member; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_org_function_member (id, pid, personid, role, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_org_function_member (id, pid, personid, role, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 MJPTGVOMDFCYBSTYTIVNWPFAGHRNJDSOYTYEHKKEJXFQBPJCHM		Andi	System Analist	System Analist		UserID	2024-11-23 23:58:59.481764	\N	2024-11-23 23:58:59.481764	\N
 \.
 
@@ -10817,7 +10817,7 @@ MJPTGVOMDFCYBSTYTIVNWPFAGHRNJDSOYTYEHKKEJXFQBPJCHM		Andi	System Analist	System A
 -- Data for Name: t_party; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, date_of_birth, sex_type, age, marital_status, latest_education, customer_type, nationality) FROM stdin;
+COPY  t_party (id, pid, status, createdby, createddate, updatedby, updateddate, delflag, first_name, last_name, id_type, id_no, date_of_birth, sex_type, age, marital_status, latest_education, customer_type, nationality) FROM stdin;
 \.
 
 
@@ -10825,7 +10825,7 @@ COPY public.t_party (id, pid, status, createdby, createddate, updatedby, updated
 -- Data for Name: t_party_address; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party_address (id, pid, address_type, address_line, city, province, country, postal_code, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_party_address (id, pid, address_type, address_line, city, province, country, postal_code, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 80731d006483ce6cbca5ff4d892bbac72297aa4ecb63d			Jakarta Timur	Jakarta			2345			2026-09-01 09:31:34.836		2026-09-01 09:31:34.836	
 1b2a382b04fe9926e1b7aa2fbd44ffb16d178d572de51	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296		Jakarta Timur	Jakarta			13910			2026-09-02 11:08:15.411		2026-09-02 11:08:15.412	
 2e798c4f5cb4161f82a04e0ffd8868f09d62410d6f767	809a0beba663cd15d69d760d8619adebbea1542110a4d		Jakarta Timur	Jakarta			13002			2026-09-03 03:43:14.18		2026-09-03 03:43:14.18	
@@ -10838,7 +10838,7 @@ c905f326e07b75bdac922bf75fbe25af371387339b826	ded4ee14322265cb66361c6fc166b18e8a
 -- Data for Name: t_party_contact; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party_contact (id, pid, contact_type, contact_value, is_primary, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_party_contact (id, pid, contact_type, contact_value, is_primary, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 b68aee878b3ef8dfedffeddb2fcfc681e50bf03277bf9			08799282728			new and saved	2026-09-01 09:04:28.403		2026-09-01 09:04:28.403	
 105b260e165c6c97c9052f5c0c91c695ef67286a54640	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296		08728882773				2026-09-02 11:06:27.336		2026-09-02 11:06:27.336	
 7cd3ee2bee530ecc123f21ab03df2b4e73f9086e14a3e	809a0beba663cd15d69d760d8619adebbea1542110a4d		983999200				2026-09-03 03:43:00.064		2026-09-03 03:43:00.064	
@@ -10852,7 +10852,7 @@ ccab6811fffe4ed4a76a6901fb5157abaedba9a77ca3d	ded4ee14322265cb66361c6fc166b18e8a
 -- Data for Name: t_party_document; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party_document (id, pid, doc_type, file_name, file_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_party_document (id, pid, doc_type, file_name, file_path, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 da2baa4e7e9c99851f8272e3fe8ead0a04fd74d54a1d9	af464897c6ee03c71de983ae56f40c5fd48e57885dd9b	b1bf69b4-4c86-4156-bd5b-e278809183a5	Doc typwk	path			2026-09-03 10:55:55.019		2026-09-03 10:55:55.019	
 d4a6c832a21cb834241b3e125d2360e8a8d364ea6c02d		96ba3327-99a2-4369-a4fd-7e45f06c3601	file_new_saved	/directory/network			2026-09-01 09:05:19.754		2026-09-01 02:05:19.754	
 8e7d2ae43b190c86980fc8b7d9925193c3cb759a59054	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296	43e8dfe3-80ff-4fa0-9981-e396ce7dd913	dummy_file_name	gs:/file			2026-09-02 11:06:59.237		2026-09-02 04:06:59.237	
@@ -10866,7 +10866,7 @@ ff3daded0cc7419fc4b37827fbf71b5b2734a1d01ec18	af464897c6ee03c71de983ae56f40c5fd4
 -- Data for Name: t_party_identity; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party_identity (id, pid, id_type, id_number, issue_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_party_identity (id, pid, id_type, id_number, issue_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 5c1bbc2570c7bd34c33a1a474984eee55e85fc48b8fef			80080080--0	\N			2026-09-01 09:28:32.925		2026-09-01 09:28:32.925	
 e975622f1bf87eee0d76717e216485fe06ea6eefe05c0	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296		0829002039800	\N			2026-09-02 11:08:30.546		2026-09-02 11:08:30.546	
 ef56e6be749457e64fed961e8e08849721e5a7dfcd001	809a0beba663cd15d69d760d8619adebbea1542110a4d		029928399	\N			2026-09-03 03:42:43.442		2026-09-03 03:42:43.442	
@@ -10882,7 +10882,7 @@ bc1f0dc1feb70093d3fb9e0ab87f9cb2416acf9c8f0b1	ded4ee14322265cb66361c6fc166b18e8a
 -- Data for Name: t_party_relationship; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_party_relationship (id, pid, target_party_id, relationship_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_party_relationship (id, pid, target_party_id, relationship_type, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 f461a06809e7541c51ed7e510e123dcb53309de16fa19		target-new-saved				2026-09-01 09:32:07.062		2026-09-01 09:32:07.062	
 bccb3e3793eed58d69bf0265c907c2facaea30d98ec72	0af443e7a44ff681528d67c0fe16b55a7fe825ce13296	02883o00				2026-09-02 11:07:55.922		2026-09-02 11:07:55.922	
 52c192937a0bede45dfdddbcc15c03566c337051f21a5	ded4ee14322265cb66361c6fc166b18e8a0bd6c1a303f	029920	44a3e03d-5bf4-452d-856d-28bd7eba3cac			2026-09-03 03:53:09.436		2026-09-02 20:53:09.436	
@@ -10893,7 +10893,7 @@ bccb3e3793eed58d69bf0265c907c2facaea30d98ec72	0af443e7a44ff681528d67c0fe16b55a7f
 -- Data for Name: t_person; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_person (id, pid, legalname, brandname, description, dob, dobcity, idtype, idno, photoid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_person (id, pid, legalname, brandname, description, dob, dobcity, idtype, idno, photoid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 XFEPQQOEOFRSUTNDHIDOFVYXCFPRNFOEHIURUAMASOWAUHJWRA	JKCFGPDFXMNXPRQLUOMTDLWRSPQEGYHFEPXDFCUGMPUVQYOPOX	legal name test 1 edited	amgreat	legal name test 1 edited	1990-01-01 +07						UserID	2024-11-28 15:38:22.870766	UserID	2024-11-28 15:38:22.870766	\N
 WTROXYYPSDMJFFQPSBAHIKXMYQGFLWRLAELKJPNURKQKDJRCJN	JKCFGPDFXMNXPRQLUOMTDLWRSPQEGYHFEPXDFCUGMPUVQYOPOX	legal name test 2222	legal name test 22	legal name test 222	1984-01-01 +07						UserID	2024-11-28 16:04:40.24034	UserID	2024-11-28 16:04:40.24034	\N
 ADEIOJDTGNTDTBKODBBTUEMFVSKLVKRTLBIVORWQPXCEOMDXTQ	AITOQEUCVABXHNATHSASKBOFLDYYKQOFQNJPSINALVCTOIUEYU	National University	UI	National University	1990-01-01 +07	Jakarta				LEEHKDXWHRUVEBJEBKGEFSPKJLTPUOYBSDGYDHPNHJTCGNSDJM	UserID	2024-11-27 23:30:01.364164	UserID	2024-11-27 23:30:01.364164	\N
@@ -10908,7 +10908,7 @@ e3072b8c3590118f1ab25281fbfc895f70e1a977ef6d7	a93a66f035257f95d6839f19e88ad21e55
 -- Data for Name: t_policy; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_policy (id, pid, label, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_policy (id, pid, label, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10916,7 +10916,7 @@ COPY public.t_policy (id, pid, label, status, createdby, createddate, updatedby,
 -- Data for Name: t_policy_obj; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_policy_obj (id, pid, object_type, objectid, label, description, viewable, createable, editable, apiable, downloadable, shareable, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_policy_obj (id, pid, object_type, objectid, label, description, viewable, createable, editable, apiable, downloadable, shareable, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10924,7 +10924,7 @@ COPY public.t_policy_obj (id, pid, object_type, objectid, label, description, vi
 -- Data for Name: t_portal_user; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_portal_user (id, pid, uid, email, passwd, token, token_exp_timestamp, status, createdby, createddate, updatedby, updateddate) FROM stdin;
+COPY  t_portal_user (id, pid, uid, email, passwd, token, token_exp_timestamp, status, createdby, createddate, updatedby, updateddate) FROM stdin;
 4f82224a71503071459d1ffa1e1ea16ab11b20c17e1fb		IF02098	email1@gmail.com	IF02098		2026-09-19 19:32:07.035911	Active		2026-09-19 19:32:07.035911		2026-09-19 19:32:07.035911
 ca11a7219df8bd204c6ef753836734b29f671f1aabac3		Kristian Butar	email2@gmail.com	Kristian Butar		2026-09-19 19:32:38.602296			2026-09-19 19:32:38.602296		2026-09-19 19:32:38.602296
 5236eb1471182df616c73c98ddfd4b8f3b95e7dc491ba		Dorti	email3@gmail.com	Dorti		2026-09-19 19:33:07.033873			2026-09-19 19:33:07.033873		2026-09-19 19:33:07.033873
@@ -10958,7 +10958,7 @@ e4b19513a6168fcd65f95a32415fe4cfcd316f90790d9	NNTRPUMKAFEEGKPTQKNIQGCRDCUGHGJRIC
 -- Data for Name: t_product; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_product (id, pid, product_code, product_name, product_type, interest_rate, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_product (id, pid, product_code, product_name, product_type, interest_rate, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10966,7 +10966,7 @@ COPY public.t_product (id, pid, product_code, product_name, product_type, intere
 -- Data for Name: t_qris; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_qris (id, pid, merchant_id, qris_code, nmid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_qris (id, pid, merchant_id, qris_code, nmid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10974,7 +10974,7 @@ COPY public.t_qris (id, pid, merchant_id, qris_code, nmid, status, createdby, cr
 -- Data for Name: t_reference; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_reference (id, pid, name, role, phone, email, status, uri, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_reference (id, pid, name, role, phone, email, status, uri, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -10982,7 +10982,7 @@ COPY public.t_reference (id, pid, name, role, phone, email, status, uri, created
 -- Data for Name: t_role; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_role (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_role (id, pid, label, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 GACGYFQIXNSDVCSNOAKDUDDKHBEIIXCIJVJFJSRHGXLCBBMQUN		Administrator	Administrator		EDITED	2024-11-08 15:13:05.527329		2024-11-08 15:13:05.527329	\N
 LMKSKASALWCMOKIOMDJYUKKIMDJSOKVFULJIFWVPFRGWJKEHUU		Manager L1	Team Lead			2024-11-19 13:44:17.460533		2024-11-19 13:44:17.460533	\N
 PBUJONHRUFPMIBUFYORBSJHSJKEVKYTAFXSTTGJCGHELHNEMYO		Manager L2	Division Manager			2024-11-19 13:44:52.513962		2024-11-19 13:44:52.513962	\N
@@ -10998,7 +10998,7 @@ BDONWEPABTWSRNDQQTBOMNUNLJRKYNJOQCJFWSCSILOURHDVOV	LISLRQYNVROSCRLNFCQQAXHLOEAKQ
 -- Data for Name: t_role_group; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_role_group (id, pid, groupid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_role_group (id, pid, groupid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -11006,7 +11006,7 @@ COPY public.t_role_group (id, pid, groupid, status, createdby, createddate, upda
 -- Data for Name: t_role_members; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_role_members (id, pid, personid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_role_members (id, pid, personid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -11014,7 +11014,7 @@ COPY public.t_role_members (id, pid, personid, status, createdby, createddate, u
 -- Data for Name: t_role_policies; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_role_policies (id, pid, policy_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_role_policies (id, pid, policy_id, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -11022,7 +11022,7 @@ COPY public.t_role_policies (id, pid, policy_id, status, createdby, createddate,
 -- Data for Name: t_session; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_session (id, pid, formid, sessionid, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_session (id, pid, formid, sessionid, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 VUGAQNYPVUKGSGORUMROMCNWLYSAWFHOIEDOXYKBPLMWJTPBVL		OOKBPAQEHLXCJVHCBYXNKOVPCRKAHIFNFBNNPBQSDMJGUKXRFL	PXUTMUBLBHWNUIVGNFRCVYKHHYPWYGSVOHVCDDSSPYTYDJCVQL	SEARCHING	2024-11-15 12:41:36.867706		2024-11-15 12:41:36.867706	
 MQRTBFSOXUXRBXVRFWKMPEPUCPIBTIYAJYGYFVUTFUSJGWRNXQ		OOKBPAQEHLXCJVHCBYXNKOVPCRKAHIFNFBNNPBQSDMJGUKXRFL	NQPLHGQUJORPNDYSADPLPGMJRJXHKAWJDLUVHKUFDIHOCAWXWL	SEARCHING	2024-11-15 12:41:55.012843		2024-11-15 12:41:55.012843	
 GRIMGIAVKMQOQQWPQWONJVVUHFLGTVICFPECMDELKGPXPBKNHE		OOKBPAQEHLXCJVHCBYXNKOVPCRKAHIFNFBNNPBQSDMJGUKXRFL	EBSPHLTBOYAPADRPCBYHUBGLBYWDPXFWLKVNMSKKDXLYOEWAXB	SEARCHING	2024-11-15 12:42:11.466982		2024-11-15 12:42:11.466982	
@@ -20238,7 +20238,7 @@ XUAQJFQVRNNLYWHDSDPNKTBPKFOYYRGJKRDTEMAGJKLWGQQIUT		PSVSHDMPLJVEIVHHRKRYLEOBLCBT
 -- Data for Name: t_solution_product; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_solution_product (id, pid, label, description, html_content, seqno, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_solution_product (id, pid, label, description, html_content, seqno, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 b88e46c4906af853030061096d2a294091f83b597dbb6		ERP - Enterprise Resource Planning	ERP - Enterprise Resource Planning		1		TEST	2026-09-26 11:05:16.985563		2026-09-26 11:05:16.985563	
 2c62d38c6bffa201dea753e23caf59bb552a71960f8b5		SMS/Whatsapp Bulks	SMS/Whatsapp Bulks		2		TEST	2026-09-26 11:05:36.408388		2026-09-26 11:05:36.408388	
 c308237a47844e5dbfbdd0bd080e100d8d75e2381f136		POS - Point of Sale	POS - Point of Sale		\N		TEST	2026-09-26 11:05:50.045249		2026-09-26 11:05:50.045249	
@@ -20256,7 +20256,7 @@ a1d62c548ca0ab94ba910e0247b8cb2a9841a6d43984d		Student Management System	Student
 -- Data for Name: t_sys_job; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_sys_job (id, pid, label, seqno, uri, payload, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_sys_job (id, pid, label, seqno, uri, payload, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 VREKYPDBMQDSKFYPFHBDBQOFQLIXRXDHYAEFNMKRITWCOQMIEB		Cache Form Column 	1	http://localhost:8084/amgreate/api/job/formcolumns	//payload is the formid, by default all		2024-11-11 18:59:14.517089		2024-11-11 18:59:14.517089	
 DGHQWMVXCOBBYDYCKOYVEXPBTPRHPQIGSIIESXRRDWHVJHHWDH		Cache Form Template	2	http://localhost:8084/amgreate/api/job/cache/form	// default all, can be parameterized for specific formId		2024-11-11 19:00:32.418257		2024-11-11 19:00:32.418257	
 AGMSATXQFMQNANILWTILJBENMJACJRKXOIDHGLXXKUHPDHTYQL		Cache Form Pages	3	http://localhost:8084/amgreate/api/job/cache/pages	Pages: Search, View, Edit, Delete		2024-11-11 19:01:09.166754		2024-11-11 19:01:09.166754	
@@ -20269,7 +20269,7 @@ LSUYXVDJHLEXPCOETPCKMNKBUIGJVTOROUJIINYDXEGRLSFWSC		Cache Html for Form	5	http:/
 -- Data for Name: t_t_cols_def; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_t_cols_def (id, pid, label, seq, col_name, dt_type, html_type, visible, ref_col, def_val, isdisabled, isempty, dupvalue) FROM stdin;
+COPY  t_t_cols_def (id, pid, label, seq, col_name, dt_type, html_type, visible, ref_col, def_val, isdisabled, isempty, dupvalue) FROM stdin;
 cb96f800-0bc5-4934-9865-6678b1674eb5	EMPTY	emp_id	1	emp_id	varchar	text	YES		\N	NO	NO	\N
 9b8d2e41-0f73-421d-9321-4f1a2b3c4d5e	e11f7c82-419b-4e12-b94d-7a3b2c1d0e5f	Target .tsx	9	target_tsx	character varying(50)	character varying(50)	YES		\N	NO	NO	\N
 7afc6c46-23d9-4cec-bbfb-2d0d43309bce	WMKJDDKLBLQVLSPNHKKMEUOOUSUKFFLXQHQDYUXKJKBWEJWCBK	src_path	4	src_path	text	text	YES		\N	NO	NO	\N
@@ -21365,7 +21365,7 @@ da733f5a-d911-4d45-bd6c-3f6753a1f80d	85558480-4c6e-4901-a526-e8e320f732d0	Create
 -- Data for Name: t_template; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_template (id, pid, label, template, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_template (id, pid, label, template, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 viewtype0003		Template for Add Page	<div class="box-100 m-2 h-10 mt-0 p-8 overflow b1" > \n\t<div class="box-100 m-0 p-8 txr" id="[[HEADERID]]">\n\t\t<div class="tablecss h-10 overflow">\n\t\t\t<div class="box-100 rowplaincss"><div class="col-2 txl p-8" id="FORMLABELID">[[FORMLABELID]]</div><div class="col-2 txr p-8" id="MENUID">\n\t\t\t\t\t<form-menu id="formmenuid"><div></div></form-menu>\n\t\t\t</div></div>\n\t\t</div>\n\t</div>\n\t<div class="box-100 m-0 h-8 p-8 txc" style="justify-content:center;" id="CONTENTID">\n\t\t<div class="tablecss p-4 overflow" >\n\t\t\t\t<PAGEFORM class="col-1" id="RECORDID">\n\t\t\t\t\t<div class="box-100 rowcss"><div class="col-4 txl">ID:</div><div class="col-4 txc"></div><div class="col-4 txl">View Type:</div><div class="col-4 txc"></div> </div>\n\t\t\t\t\t<div class="box-100 rowcss"><div class="col-4 txl">PID:</div><div class="col-4 txc"></div><div class="col-4 txl">View Template:</div><div class="col-4 txc"></div> </div>\n\t\t\t\t</PAGEFORM>\n\t\t\t\t<div class="box-100 rowplaincss"><div class="colnorecscss txr p-8"></div></div>\n\t\t\t\t<div class="box-100 rowplaincss"><div class="colnorecscss txr p	\N	\N	UserID	\N	
 viewtype0002		Template for Search Page	<div class="box-100 m-2 mt-0 overflow" > <div class="box-100 m-0 p-8 txr" id="[[HEADERID]]"><div class="tablecss overflow"><div class="box-100 rowplaincss"><div class="col-2 txl p-8" id="FORMLABELID">[[FORMLABEL]]</div><div class="col-2 txr p-8" id="MENUID">[[MENU]]</div></div>\n</div></div><div class="box-100 m-0 p-8 txc h-10" style="justify-content:center;" id="CONTENTID"><div class="tablecss p-4 overflow" id="[[TABLEID]]"><div class="box-100 rowplaincss"><div class=" col-1 colnorecscss txr p-8 p1" id="TABPAGINGID">[[PAGING]]</div></div>\n</div><div class="tablecss p-4 col-1 h-7" style="overflow:scroll;" id="TABLEID" >\n<columnheader class="col-1" id="tablecolheaderid">[[COLUMNS]]</columnheader>\n<RECORDS class="col-1" id="RECORDSID">[[RECORDS]]</RECORDS>\n<div class="box-100 rowplaincss"><div class="colnorecscss txr p-8"></div></div><div class="box-100 rowplaincss"><div class="colnorecscss txr p-8" id="BUTTONID"></div></div></div></div><div class="box-95 m-0 p-8  txr"> </div></div>	\N	\N	UserID	\N	
 viewtype0004	\N	Template for Edit Page	\n<div class="box-100 m-2 h-10 mt-0 p-8 overflow b1" > \n\t<div class="box-100 m-0 p-8 txr" id="[[HEADERID]]">\n\t\t<div class="tablecss h-10 overflow">\n\t\t\t<div class="box-100 rowplaincss"><div class="col-2 txl p-8" id="FORMLABELID">[[FORMLABEL]]</div><div class="col-2 txr p-8" id="MENUID">\n\t\t\t\t<form-menu id="formmenuid"><div></div></form-menu>\n\t\t\t</div></div>\n\t\t</div>\n\t</div>\n\t<div class="box-100 m-0 h-8 p-8 txc" style="justify-content:center;" id="CONTENTID">\n\t\t<div class="tablecss p-4 overflow" >\n\t\t\t\t<PAGEFORM class="col-1" id="RECORDID">\n\t\t\t\t\t<div class="box-100 rowcss"><div class="col-4 txl">ID:</div><div class="col-4 txc"></div><div class="col-4 txl">View Type:</div><div class="col-4 txc"></div> </div>\n\t\t\t\t\t<div class="box-100 rowcss"><div class="col-4 txl">PID:</div><div class="col-4 txc"></div><div class="col-4 txl">View Template:</div><div class="col-4 txc"></div> </div>\n\t\t\t\t</PAGEFORM>\n\t\t\t\t<div class="box-100 rowplaincss"><div class="colnorecscss txr p-8"></div></div>\n\t\t\t\t<div class="box-100 rowplaincss"><div class="colnorecscss txr p-8" id="BUTTONID">[[BUTTON]]</div></div>\n\t\t</div>\n\t</div>\n\t<div class="box-95 m-0 p-8  txr"> </div>\t\n</div>\n	\N	\N	\N	\N	\N
@@ -21379,7 +21379,7 @@ viewtype0007		Template for Applications Page	<div class="box-100 m-2 mt-0 overfl
 -- Data for Name: t_tenant; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_tenant (id, pid, accountno, name, legalname, brandname, description, dob, dobcity, idtype, idno, photoid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_tenant (id, pid, accountno, name, legalname, brandname, description, dob, dobcity, idtype, idno, photoid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 EEKDPDWGLHOYXFPWOPBCKKNQYACDSBTJPCFDQMHQRUUOXTGROC		T0000000001	\N	AMGREAT PTE LTD	AMGREAT	AMGREAT IS A STARTUP WORKING FOR APPLICATION TRANSFORMATION	16-02-1984	JAKARTA	ID COMPANY	1234567890123456	PHOTOID	ACTIVE	Batch	2024-09-10 23:16:43.93315		2024-09-10 23:16:43.93315	
 WNPCIIJWCHHWBCRWVVQSSPYRBABCRCXVIYDKUWJSIGYCXGYUOH		0919288	\N	AMGREAT DIGITAL	AMGREAT	AMGREAT DIGITAL is working on IT Transformation for Business Channel Apps, Data Integration, AI								2024-11-06 12:49:49.920592		2024-11-06 12:49:49.920592	\N
 HBFOXOJRCPELSJOBVYGEMKLOVCFOTKPXGSTMEDKCBJRGKOXMQV		09192884	\N	Test	Test	Test	0190-01-01 +07						UserID	2024-11-23 23:57:21.898023	\N	2024-11-23 23:57:21.898023	\N
@@ -21390,7 +21390,7 @@ HBFOXOJRCPELSJOBVYGEMKLOVCFOTKPXGSTMEDKCBJRGKOXMQV		09192884	\N	Test	Test	Test	0
 -- Data for Name: t_tenant_db; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_tenant_db (id, pid, dbip, dbname, dbport, vaultuserid, vaultpwd, certpath, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_tenant_db (id, pid, dbip, dbname, dbport, vaultuserid, vaultpwd, certpath, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 ROGKXGNIGBHPKBMWKXTRNTTQIMXHVJEQHVTYYPICLPJINSCGCT		172.0.0.1	AMGREATDB	5432	AMGREAT	AMGREAT	CERTPATH	ACTIVE	Batch	2024-09-10 23:17:23.064131		2024-09-10 23:17:23.064131	
 UEADWILXJOKHLTCEYOQBXKDRWUIANBGFXFXOJWJCMYYDMJBHRX		127.0.0.1	amgreatdb2	5432	amgreat	amgreat			EDITED	2024-11-08 15:14:28.426157		2024-11-08 15:14:28.426157	\N
 \.
@@ -21400,7 +21400,7 @@ UEADWILXJOKHLTCEYOQBXKDRWUIANBGFXFXOJWJCMYYDMJBHRX		127.0.0.1	amgreatdb2	5432	am
 -- Data for Name: t_token_master; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_token_master (id, log_timestamp, action, uid, node_assigned, request_details, response_payload) FROM stdin;
+COPY  t_token_master (id, log_timestamp, action, uid, node_assigned, request_details, response_payload) FROM stdin;
 1	2026-09-29 09:43:53.166206	generate_token	user_12345	token_node_01	{"action":"generate_token","uid":"user_12345","duration":"10","channel":"api"}	{"uid":"user_12345","private":"Mf6kQwSJx9UOrHhskOOdDo8qCpWVyaQr4WOTOtBDwI5Kfw7EpV","public":"U705qOW2NOyruQ39OcDM02Tl4WKUvXr8Pg4WpawXPUZMt6tAW0","fromtimestamp":"2026-09-29 09:43:52","expiretimestamp":"2026-09-29 09:53:52"}
 2	2026-09-29 09:45:19.995262	heartbeat	system	token_node_01	Node heartbeat pulse	active
 3	2026-09-29 09:45:36.468721	heartbeat	system	token_node_02	Node heartbeat pulse	active
@@ -22854,7 +22854,7 @@ COPY public.t_token_master (id, log_timestamp, action, uid, node_assigned, reque
 -- Data for Name: t_transaction_history; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_transaction_history (id, pid, account_id, trx_type, amount, channel_code, trx_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_transaction_history (id, pid, account_id, trx_type, amount, channel_code, trx_date, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -22862,7 +22862,7 @@ COPY public.t_transaction_history (id, pid, account_id, trx_type, amount, channe
 -- Data for Name: t_types; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_types (id, pid, label, description, dt_type, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_types (id, pid, label, description, dt_type, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 QSPEIGTTERLJJSIWQOQXRXGCJNKYKJPKWBAAAKYVRVQIYKFNNI		INT	INTEGER DATA TYPE	INT	Batch	2024-09-08 16:15:19.462063		2024-09-08 16:15:19.462063	
 REHOUBNJQWBHEIBQMEOOTANBFUJDXILXWSWOHEVISGYXJLXPBQ		STRING	STRING DATA TYPE	VARCHAR	Batch	2024-09-08 16:15:19.463522		2024-09-08 16:15:19.463522	
 KQVPOKBVUKVSDYKAHURAPGESPENBLEXFKVVLQLOUXQQKWHOTNX		DATE	DATE DATA TYPE	DATE	Batch	2024-09-08 16:15:19.464198		2024-09-08 16:15:19.464198	
@@ -22876,7 +22876,7 @@ MTHVOOXCPVVHWNQYDIAUCMEJFIEBSUWVJIJUFTQBGPGLRTVDOX		DECIMAL	DECIMAL DATA TYPE FO
 -- Data for Name: t_uploaded_files; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_uploaded_files (id, pid, originalname, savedname, size, mimetype, path, createdby, createddate, updatedby, updateddate, seq) FROM stdin;
+COPY  t_uploaded_files (id, pid, originalname, savedname, size, mimetype, path, createdby, createddate, updatedby, updateddate, seq) FROM stdin;
 6bc9dde5b14eb117476a7f2ce8eead249c02fbb063783	6931e6a2b69d02fe1fcd13739d200d2f302dea7724b47	index1.pdf	files-1788590486577-640921985.pdf	498862	application/pdf	/Users/admin/Documents/gemini_src_dev_react/fileuploads/files-1788590486577-640921985.pdf	\N	2026-09-05 13:41:26.601178	\N	2026-09-05 13:41:26.601178	\N
 8ad948e3e7b79eac0435f537728ef01c5c2cea4e2ec17	6931e6a2b69d02fe1fcd13739d200d2f302dea7724b47	html_dummy_doc_2_2026.pdf	files-1788590486578-331096725.pdf	70666	application/pdf	/Users/admin/Documents/gemini_src_dev_react/fileuploads/files-1788590486578-331096725.pdf	\N	2026-09-05 13:41:26.606562	\N	2026-09-05 13:41:26.606562	\N
 a5fdcfea724bd7866af5ea0ce74e1a7d81f9b2b0d1e0c	6931e6a2b69d02fe1fcd13739d200d2f302dea7724b47	html_dummy_doc1_about.pdf	files-1788590486579-172988994.pdf	58079	application/pdf	/Users/admin/Documents/gemini_src_dev_react/fileuploads/files-1788590486579-172988994.pdf	\N	2026-09-05 13:41:26.612819	\N	2026-09-05 13:41:26.612819	\N
@@ -23314,7 +23314,7 @@ efaffa0d13c25071b6c2587df5a379aa7baeef9cf1e76	bbb8d4550c5f26f172e20338774926f029
 -- Data for Name: t_users; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_users (id, pid, uid, password, email, isverified, ismfa, mfatargetid, isfmaverified, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_users (id, pid, uid, password, email, isverified, ismfa, mfatargetid, isfmaverified, description, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 EKOBAYCOCYHTJDUQIMELYVMURCXPPWJAFMNBWTODDGVUYIQNYK		kristian	test	test	YES						UserID	2024-11-19 16:50:08.651179	kristian	2024-11-19 16:50:08.651179	\N
 NNTRPUMKAFEEGKPTQKNIQGCRDCUGHGJRICTFRLDKOBBXIEBRXJ		dorti	test	test	YES					edit and submit	UserID	2024-11-19 16:51:21.476857	dorti	2024-11-19 09:51:21	
 ea64688ef7b3c3f293ebb39adac25774ab737074a6926		namaste	12345	namaste@							TEST	2026-10-01 16:26:55.127376		2026-10-01 16:26:55.127376	
@@ -23326,7 +23326,7 @@ a93a66f035257f95d6839f19e88ad21e558e325437c61		if02098	12345	if02098@							TEST
 -- Data for Name: t_users_role; Type: TABLE DATA; Schema: public; Owner: amgreat
 --
 
-COPY public.t_users_role (id, pid, roleid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
+COPY  t_users_role (id, pid, roleid, status, createdby, createddate, updatedby, updateddate, delflag) FROM stdin;
 \.
 
 
@@ -23334,28 +23334,28 @@ COPY public.t_users_role (id, pid, roleid, status, createdby, createddate, updat
 -- Name: chat_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: amgreat
 --
 
-SELECT pg_catalog.setval('public.chat_logs_id_seq', 5263, true);
+SELECT pg_catalog.setval(' chat_logs_id_seq', 5263, true);
 
 
 --
 -- Name: t_mon_chat_node_cluster_id_seq; Type: SEQUENCE SET; Schema: public; Owner: amgreat
 --
 
-SELECT pg_catalog.setval('public.t_mon_chat_node_cluster_id_seq', 38, true);
+SELECT pg_catalog.setval(' t_mon_chat_node_cluster_id_seq', 38, true);
 
 
 --
 -- Name: t_token_master_id_seq; Type: SEQUENCE SET; Schema: public; Owner: amgreat
 --
 
-SELECT pg_catalog.setval('public.t_token_master_id_seq', 1446, true);
+SELECT pg_catalog.setval(' t_token_master_id_seq', 1446, true);
 
 
 --
 -- Name: chat_logs chat_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.chat_logs
+ALTER TABLE ONLY  chat_logs
     ADD CONSTRAINT chat_logs_pkey PRIMARY KEY (id);
 
 
@@ -23363,7 +23363,7 @@ ALTER TABLE ONLY public.chat_logs
 -- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.employees
+ALTER TABLE ONLY  employees
     ADD CONSTRAINT employees_pkey PRIMARY KEY (emp_id);
 
 
@@ -23371,7 +23371,7 @@ ALTER TABLE ONLY public.employees
 -- Name: master_heartbeats master_heartbeats_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.master_heartbeats
+ALTER TABLE ONLY  master_heartbeats
     ADD CONSTRAINT master_heartbeats_pkey PRIMARY KEY (master_id);
 
 
@@ -23379,7 +23379,7 @@ ALTER TABLE ONLY public.master_heartbeats
 -- Name: routing_mapping routing_mapping_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.routing_mapping
+ALTER TABLE ONLY  routing_mapping
     ADD CONSTRAINT routing_mapping_pkey PRIMARY KEY (id);
 
 
@@ -23387,7 +23387,7 @@ ALTER TABLE ONLY public.routing_mapping
 -- Name: t_account t_account_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_account
+ALTER TABLE ONLY  t_account
     ADD CONSTRAINT t_account_pkey PRIMARY KEY (id);
 
 
@@ -23395,7 +23395,7 @@ ALTER TABLE ONLY public.t_account
 -- Name: t_business_transformation t_business_transformation_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_business_transformation
+ALTER TABLE ONLY  t_business_transformation
     ADD CONSTRAINT t_business_transformation_pkey PRIMARY KEY (id);
 
 
@@ -23403,7 +23403,7 @@ ALTER TABLE ONLY public.t_business_transformation
 -- Name: t_card t_card_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_card
+ALTER TABLE ONLY  t_card
     ADD CONSTRAINT t_card_pkey PRIMARY KEY (id);
 
 
@@ -23411,7 +23411,7 @@ ALTER TABLE ONLY public.t_card
 -- Name: t_col_list_map t_col_list_map_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_col_list_map
+ALTER TABLE ONLY  t_col_list_map
     ADD CONSTRAINT t_col_list_map_pkey PRIMARY KEY (id);
 
 
@@ -23419,7 +23419,7 @@ ALTER TABLE ONLY public.t_col_list_map
 -- Name: t_customer_account t_customer_account_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_customer_account
+ALTER TABLE ONLY  t_customer_account
     ADD CONSTRAINT t_customer_account_pkey PRIMARY KEY (id);
 
 
@@ -23427,7 +23427,7 @@ ALTER TABLE ONLY public.t_customer_account
 -- Name: t_customer t_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_customer
+ALTER TABLE ONLY  t_customer
     ADD CONSTRAINT t_customer_pkey PRIMARY KEY (id);
 
 
@@ -23435,7 +23435,7 @@ ALTER TABLE ONLY public.t_customer
 -- Name: t_device t_device_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_device
+ALTER TABLE ONLY  t_device
     ADD CONSTRAINT t_device_pkey PRIMARY KEY (id);
 
 
@@ -23443,7 +23443,7 @@ ALTER TABLE ONLY public.t_device
 -- Name: t_emp_achievement t_emp_achievement_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_emp_achievement
+ALTER TABLE ONLY  t_emp_achievement
     ADD CONSTRAINT t_emp_achievement_pkey PRIMARY KEY (id);
 
 
@@ -23451,7 +23451,7 @@ ALTER TABLE ONLY public.t_emp_achievement
 -- Name: t_emp_assignment t_emp_assignment_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_emp_assignment
+ALTER TABLE ONLY  t_emp_assignment
     ADD CONSTRAINT t_emp_assignment_pkey PRIMARY KEY (id);
 
 
@@ -23459,7 +23459,7 @@ ALTER TABLE ONLY public.t_emp_assignment
 -- Name: t_emp_experience t_emp_experience_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_emp_experience
+ALTER TABLE ONLY  t_emp_experience
     ADD CONSTRAINT t_emp_experience_pkey PRIMARY KEY (id);
 
 
@@ -23467,7 +23467,7 @@ ALTER TABLE ONLY public.t_emp_experience
 -- Name: t_employee t_employee_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_employee
+ALTER TABLE ONLY  t_employee
     ADD CONSTRAINT t_employee_pkey PRIMARY KEY (id);
 
 
@@ -23475,7 +23475,7 @@ ALTER TABLE ONLY public.t_employee
 -- Name: t_ht_address t_ht_address_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_address
+ALTER TABLE ONLY  t_ht_address
     ADD CONSTRAINT t_ht_address_pkey PRIMARY KEY (id);
 
 
@@ -23483,7 +23483,7 @@ ALTER TABLE ONLY public.t_ht_address
 -- Name: t_ht_assets t_ht_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_assets
+ALTER TABLE ONLY  t_ht_assets
     ADD CONSTRAINT t_ht_assets_pkey PRIMARY KEY (id);
 
 
@@ -23491,7 +23491,7 @@ ALTER TABLE ONLY public.t_ht_assets
 -- Name: t_ht_building t_ht_building_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_building
+ALTER TABLE ONLY  t_ht_building
     ADD CONSTRAINT t_ht_building_pkey PRIMARY KEY (id);
 
 
@@ -23499,7 +23499,7 @@ ALTER TABLE ONLY public.t_ht_building
 -- Name: t_ht_coa t_ht_coa_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_coa
+ALTER TABLE ONLY  t_ht_coa
     ADD CONSTRAINT t_ht_coa_pkey PRIMARY KEY (id);
 
 
@@ -23507,7 +23507,7 @@ ALTER TABLE ONLY public.t_ht_coa
 -- Name: t_ht_contact t_ht_contact_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_contact
+ALTER TABLE ONLY  t_ht_contact
     ADD CONSTRAINT t_ht_contact_pkey PRIMARY KEY (id);
 
 
@@ -23515,7 +23515,7 @@ ALTER TABLE ONLY public.t_ht_contact
 -- Name: t_ht_customers t_ht_customers_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_customers
+ALTER TABLE ONLY  t_ht_customers
     ADD CONSTRAINT t_ht_customers_pkey PRIMARY KEY (id);
 
 
@@ -23523,7 +23523,7 @@ ALTER TABLE ONLY public.t_ht_customers
 -- Name: t_ht_hotel t_ht_hotel_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_hotel
+ALTER TABLE ONLY  t_ht_hotel
     ADD CONSTRAINT t_ht_hotel_pkey PRIMARY KEY (id);
 
 
@@ -23531,7 +23531,7 @@ ALTER TABLE ONLY public.t_ht_hotel
 -- Name: t_ht_menu t_ht_menu_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_menu
+ALTER TABLE ONLY  t_ht_menu
     ADD CONSTRAINT t_ht_menu_pkey PRIMARY KEY (id);
 
 
@@ -23539,7 +23539,7 @@ ALTER TABLE ONLY public.t_ht_menu
 -- Name: t_ht_orders t_ht_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_orders
+ALTER TABLE ONLY  t_ht_orders
     ADD CONSTRAINT t_ht_orders_pkey PRIMARY KEY (id);
 
 
@@ -23547,7 +23547,7 @@ ALTER TABLE ONLY public.t_ht_orders
 -- Name: t_ht_payment_history t_ht_payment_history_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_payment_history
+ALTER TABLE ONLY  t_ht_payment_history
     ADD CONSTRAINT t_ht_payment_history_pkey PRIMARY KEY (id);
 
 
@@ -23555,7 +23555,7 @@ ALTER TABLE ONLY public.t_ht_payment_history
 -- Name: t_ht_rooms t_ht_rooms_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_rooms
+ALTER TABLE ONLY  t_ht_rooms
     ADD CONSTRAINT t_ht_rooms_pkey PRIMARY KEY (id);
 
 
@@ -23563,7 +23563,7 @@ ALTER TABLE ONLY public.t_ht_rooms
 -- Name: t_ht_staff t_ht_staff_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_staff
+ALTER TABLE ONLY  t_ht_staff
     ADD CONSTRAINT t_ht_staff_pkey PRIMARY KEY (id);
 
 
@@ -23571,7 +23571,7 @@ ALTER TABLE ONLY public.t_ht_staff
 -- Name: t_ht_tenants t_ht_tenants_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_ht_tenants
+ALTER TABLE ONLY  t_ht_tenants
     ADD CONSTRAINT t_ht_tenants_pkey PRIMARY KEY (id);
 
 
@@ -23579,7 +23579,7 @@ ALTER TABLE ONLY public.t_ht_tenants
 -- Name: t_html_editor t_html_editor_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_html_editor
+ALTER TABLE ONLY  t_html_editor
     ADD CONSTRAINT t_html_editor_pkey PRIMARY KEY (id);
 
 
@@ -23587,7 +23587,7 @@ ALTER TABLE ONLY public.t_html_editor
 -- Name: t_icons t_icons_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_icons
+ALTER TABLE ONLY  t_icons
     ADD CONSTRAINT t_icons_pkey PRIMARY KEY (id);
 
 
@@ -23595,7 +23595,7 @@ ALTER TABLE ONLY public.t_icons
 -- Name: t_list_sql t_list_sql_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_list_sql
+ALTER TABLE ONLY  t_list_sql
     ADD CONSTRAINT t_list_sql_pkey PRIMARY KEY (id);
 
 
@@ -23603,7 +23603,7 @@ ALTER TABLE ONLY public.t_list_sql
 -- Name: t_merchant_account t_merchant_account_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_merchant_account
+ALTER TABLE ONLY  t_merchant_account
     ADD CONSTRAINT t_merchant_account_pkey PRIMARY KEY (id);
 
 
@@ -23611,7 +23611,7 @@ ALTER TABLE ONLY public.t_merchant_account
 -- Name: t_merchant t_merchant_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_merchant
+ALTER TABLE ONLY  t_merchant
     ADD CONSTRAINT t_merchant_pkey PRIMARY KEY (id);
 
 
@@ -23619,7 +23619,7 @@ ALTER TABLE ONLY public.t_merchant
 -- Name: t_mn t_mn_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_mn
+ALTER TABLE ONLY  t_mn
     ADD CONSTRAINT t_mn_pkey PRIMARY KEY (id);
 
 
@@ -23627,7 +23627,7 @@ ALTER TABLE ONLY public.t_mn
 -- Name: t_mon_chat_node_cluster t_mon_chat_node_cluster_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_mon_chat_node_cluster
+ALTER TABLE ONLY  t_mon_chat_node_cluster
     ADD CONSTRAINT t_mon_chat_node_cluster_pkey PRIMARY KEY (id);
 
 
@@ -23635,7 +23635,7 @@ ALTER TABLE ONLY public.t_mon_chat_node_cluster
 -- Name: t_object_uploaded t_object_uploaded_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_object_uploaded
+ALTER TABLE ONLY  t_object_uploaded
     ADD CONSTRAINT t_object_uploaded_pkey PRIMARY KEY (id);
 
 
@@ -23643,7 +23643,7 @@ ALTER TABLE ONLY public.t_object_uploaded
 -- Name: t_party_address t_party_address_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party_address
+ALTER TABLE ONLY  t_party_address
     ADD CONSTRAINT t_party_address_pkey PRIMARY KEY (id);
 
 
@@ -23651,7 +23651,7 @@ ALTER TABLE ONLY public.t_party_address
 -- Name: t_party_contact t_party_contact_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party_contact
+ALTER TABLE ONLY  t_party_contact
     ADD CONSTRAINT t_party_contact_pkey PRIMARY KEY (id);
 
 
@@ -23659,7 +23659,7 @@ ALTER TABLE ONLY public.t_party_contact
 -- Name: t_party_document t_party_document_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party_document
+ALTER TABLE ONLY  t_party_document
     ADD CONSTRAINT t_party_document_pkey PRIMARY KEY (id);
 
 
@@ -23667,7 +23667,7 @@ ALTER TABLE ONLY public.t_party_document
 -- Name: t_party_identity t_party_identity_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party_identity
+ALTER TABLE ONLY  t_party_identity
     ADD CONSTRAINT t_party_identity_pkey PRIMARY KEY (id);
 
 
@@ -23675,7 +23675,7 @@ ALTER TABLE ONLY public.t_party_identity
 -- Name: t_party t_party_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party
+ALTER TABLE ONLY  t_party
     ADD CONSTRAINT t_party_pkey PRIMARY KEY (id);
 
 
@@ -23683,7 +23683,7 @@ ALTER TABLE ONLY public.t_party
 -- Name: t_party_relationship t_party_relationship_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_party_relationship
+ALTER TABLE ONLY  t_party_relationship
     ADD CONSTRAINT t_party_relationship_pkey PRIMARY KEY (id);
 
 
@@ -23691,7 +23691,7 @@ ALTER TABLE ONLY public.t_party_relationship
 -- Name: t_portal_user t_portal_user_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_portal_user
+ALTER TABLE ONLY  t_portal_user
     ADD CONSTRAINT t_portal_user_pkey PRIMARY KEY (id);
 
 
@@ -23699,7 +23699,7 @@ ALTER TABLE ONLY public.t_portal_user
 -- Name: t_product t_product_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_product
+ALTER TABLE ONLY  t_product
     ADD CONSTRAINT t_product_pkey PRIMARY KEY (id);
 
 
@@ -23707,7 +23707,7 @@ ALTER TABLE ONLY public.t_product
 -- Name: t_qris t_qris_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_qris
+ALTER TABLE ONLY  t_qris
     ADD CONSTRAINT t_qris_pkey PRIMARY KEY (id);
 
 
@@ -23715,7 +23715,7 @@ ALTER TABLE ONLY public.t_qris
 -- Name: t_solution_product t_solution_product_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_solution_product
+ALTER TABLE ONLY  t_solution_product
     ADD CONSTRAINT t_solution_product_pkey PRIMARY KEY (id);
 
 
@@ -23723,7 +23723,7 @@ ALTER TABLE ONLY public.t_solution_product
 -- Name: t_t_cols_def t_t_cols_def_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_t_cols_def
+ALTER TABLE ONLY  t_t_cols_def
     ADD CONSTRAINT t_t_cols_def_pkey PRIMARY KEY (id);
 
 
@@ -23731,7 +23731,7 @@ ALTER TABLE ONLY public.t_t_cols_def
 -- Name: t_token_master t_token_master_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_token_master
+ALTER TABLE ONLY  t_token_master
     ADD CONSTRAINT t_token_master_pkey PRIMARY KEY (id);
 
 
@@ -23739,7 +23739,7 @@ ALTER TABLE ONLY public.t_token_master
 -- Name: t_transaction_history t_transaction_history_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_transaction_history
+ALTER TABLE ONLY  t_transaction_history
     ADD CONSTRAINT t_transaction_history_pkey PRIMARY KEY (id);
 
 
@@ -23747,7 +23747,7 @@ ALTER TABLE ONLY public.t_transaction_history
 -- Name: t_uploaded_files t_uploaded_files_pkey; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_uploaded_files
+ALTER TABLE ONLY  t_uploaded_files
     ADD CONSTRAINT t_uploaded_files_pkey PRIMARY KEY (id);
 
 
@@ -23755,7 +23755,7 @@ ALTER TABLE ONLY public.t_uploaded_files
 -- Name: t_portal_user unique_pid_uid_portal_user; Type: CONSTRAINT; Schema: public; Owner: amgreat
 --
 
-ALTER TABLE ONLY public.t_portal_user
+ALTER TABLE ONLY  t_portal_user
     ADD CONSTRAINT unique_pid_uid_portal_user UNIQUE (pid, uid);
 
 
@@ -23763,14 +23763,14 @@ ALTER TABLE ONLY public.t_portal_user
 -- Name: idx_t_html_editor_pid; Type: INDEX; Schema: public; Owner: amgreat
 --
 
-CREATE INDEX idx_t_html_editor_pid ON public.t_html_editor USING btree (pid);
+CREATE INDEX idx_t_html_editor_pid ON  t_html_editor USING btree (pid);
 
 
 --
 -- Name: TABLE t_form_actions; Type: ACL; Schema: public; Owner: admin
 --
 
-GRANT SELECT,INSERT,DELETE ON TABLE public.t_form_actions TO amgreat;
+GRANT SELECT,INSERT,DELETE ON TABLE  t_form_actions TO amgreat;
 
 
 --
